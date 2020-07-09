@@ -1,0 +1,1518 @@
+Analysis & Synthesis report for SIMD_Proc
+Wed Jul 08 21:48:26 2020
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. Analysis & Synthesis IP Cores Summary
+ 11. Logic Cells Representing Combinational Loops
+ 12. Registers Removed During Synthesis
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for Memory:memory|RAM:memdatos|altsyncram:altsyncram_component|altsyncram_c6m2:auto_generated
+ 17. Parameter Settings for User Entity Instance: VGAController:vga|ContadorNeg:HCount_Contador
+ 18. Parameter Settings for User Entity Instance: VGAController:vga|ContadorNeg:VCount_Contador
+ 19. Parameter Settings for User Entity Instance: Fetch:fetch|PCreg:PC
+ 20. Parameter Settings for User Entity Instance: Fetch:fetch|Mux2:mux_pc4
+ 21. Parameter Settings for User Entity Instance: Fetch:fetch|Mux2:mux_pcnext
+ 22. Parameter Settings for User Entity Instance: Decode:decode|Mux2:mux_ra1
+ 23. Parameter Settings for User Entity Instance: Decode:decode|Mux2:mux_ra2
+ 24. Parameter Settings for User Entity Instance: Execute:execute|Mux3:mux_ra1E
+ 25. Parameter Settings for User Entity Instance: Execute:execute|Mux3:mux_ra2E
+ 26. Parameter Settings for User Entity Instance: Execute:execute|Mux2:mux_op2
+ 27. Parameter Settings for User Entity Instance: Execute:execute|SuperALU:alu|ALU:alu
+ 28. Parameter Settings for User Entity Instance: Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador
+ 29. Parameter Settings for User Entity Instance: Execute:execute|Condition_Unit:condUnit|flopenr:flagreg1
+ 30. Parameter Settings for User Entity Instance: Execute:execute|Condition_Unit:condUnit|flopenr:flagreg0
+ 31. Parameter Settings for User Entity Instance: Memory:memory|RAM:memdatos|altsyncram:altsyncram_component
+ 32. Parameter Settings for User Entity Instance: Mux2:mux_wb
+ 33. altsyncram Parameter Settings by Entity Instance
+ 34. Port Connectivity Checks: "Memory:memory|RAM:memdatos"
+ 35. Port Connectivity Checks: "Memory:memory"
+ 36. Port Connectivity Checks: "Decode:decode|Mux2:mux_ra1"
+ 37. Post-Synthesis Netlist Statistics for Top Partition
+ 38. Elapsed Time Per Partition
+ 39. Analysis & Synthesis Messages
+ 40. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Jul 08 21:48:25 2020       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; SIMD_Proc                                   ;
+; Top-level Entity Name           ; Pipeline_ARM                                ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 278                                         ;
+; Total pins                      ; 187                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 2,097,152                                   ;
+; Total DSP Blocks                ; 1                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; Pipeline_ARM       ; SIMD_Proc          ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+; VGAController.sv                 ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/VGAController.sv                                       ;         ;
+; Umbral.sv                        ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/Umbral.sv                                              ;         ;
+; SuperALU.sv                      ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/SuperALU.sv                                            ;         ;
+; Sumador_Completo.sv              ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/Sumador_Completo.sv                                    ;         ;
+; Sumador_1bit.sv                  ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/Sumador_1bit.sv                                        ;         ;
+; StopCounter.sv                   ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/StopCounter.sv                                         ;         ;
+; RegMW.sv                         ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/RegMW.sv                                               ;         ;
+; RegFD.sv                         ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/RegFD.sv                                               ;         ;
+; RegEM.sv                         ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/RegEM.sv                                               ;         ;
+; RegDE.sv                         ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/RegDE.sv                                               ;         ;
+; RAM.v                            ; yes             ; User Wizard-Generated File             ; D:/ArquiII/Proyecto#2/RAM.v                                                  ;         ;
+; PixProm.sv                       ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/PixProm.sv                                             ;         ;
+; Pipeline_ARM.sv                  ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/Pipeline_ARM.sv                                        ;         ;
+; PCreg.sv                         ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/PCreg.sv                                               ;         ;
+; Mux3.sv                          ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/Mux3.sv                                                ;         ;
+; Mux2.sv                          ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/Mux2.sv                                                ;         ;
+; Memory.sv                        ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/Memory.sv                                              ;         ;
+; MemInst.sv                       ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/MemInst.sv                                             ;         ;
+; Hazard_Unit.sv                   ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/Hazard_Unit.sv                                         ;         ;
+; flopenr.sv                       ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/flopenr.sv                                             ;         ;
+; FlipFlop_SR.sv                   ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/FlipFlop_SR.sv                                         ;         ;
+; Fetch.sv                         ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/Fetch.sv                                               ;         ;
+; Extend.sv                        ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/Extend.sv                                              ;         ;
+; Execute.sv                       ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/Execute.sv                                             ;         ;
+; Decode.sv                        ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/Decode.sv                                              ;         ;
+; Control_Unit.sv                  ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/Control_Unit.sv                                        ;         ;
+; ContadorNeg.sv                   ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/ContadorNeg.sv                                         ;         ;
+; Condition_Unit.sv                ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/Condition_Unit.sv                                      ;         ;
+; BancoRegistros.sv                ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/BancoRegistros.sv                                      ;         ;
+; ALU.sv                           ; yes             ; User SystemVerilog HDL File            ; D:/ArquiII/Proyecto#2/ALU.sv                                                 ;         ;
+; instrucciones.txt                ; yes             ; Auto-Found File                        ; D:/ArquiII/Proyecto#2/instrucciones.txt                                      ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_c6m2.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/ArquiII/Proyecto#2/db/altsyncram_c6m2.tdf                                 ;         ;
+; /arquiii/pixeles/ram.mif         ; yes             ; Auto-Found Memory Initialization File  ; /arquiii/pixeles/ram.mif                                                     ;         ;
+; db/decode_dla.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/ArquiII/Proyecto#2/db/decode_dla.tdf                                      ;         ;
+; db/decode_61a.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/ArquiII/Proyecto#2/db/decode_61a.tdf                                      ;         ;
+; db/mux_ahb.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/ArquiII/Proyecto#2/db/mux_ahb.tdf                                         ;         ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimate of Logic utilization (ALMs needed) ; 354     ;
+;                                             ;         ;
+; Combinational ALUT usage for logic          ; 512     ;
+;     -- 7 input functions                    ; 5       ;
+;     -- 6 input functions                    ; 177     ;
+;     -- 5 input functions                    ; 123     ;
+;     -- 4 input functions                    ; 35      ;
+;     -- <=3 input functions                  ; 172     ;
+;                                             ;         ;
+; Dedicated logic registers                   ; 278     ;
+;                                             ;         ;
+; I/O pins                                    ; 187     ;
+; Total MLAB memory bits                      ; 0       ;
+; Total block memory bits                     ; 2097152 ;
+;                                             ;         ;
+; Total DSP Blocks                            ; 1       ;
+;                                             ;         ;
+; Maximum fan-out node                        ; clk     ;
+; Maximum fan-out                             ; 507     ;
+; Total fan-out                               ; 11822   ;
+; Average fan-out                             ; 8.32    ;
++---------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                             ;
++---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                              ; Entity Name      ; Library Name ;
++---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
+; |Pipeline_ARM                                     ; 512 (22)            ; 278 (1)                   ; 2097152           ; 1          ; 187  ; 0            ; |Pipeline_ARM                                                                                                                    ; Pipeline_ARM     ; work         ;
+;    |Decode:decode|                                ; 8 (0)               ; 103 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Decode:decode                                                                                                      ; Decode           ; work         ;
+;       |BancoRegistros:BR|                         ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Decode:decode|BancoRegistros:BR                                                                                    ; BancoRegistros   ; work         ;
+;       |Control_Unit:controlUnit|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Decode:decode|Control_Unit:controlUnit                                                                             ; Control_Unit     ; work         ;
+;       |RegDE:regde|                               ; 6 (6)               ; 71 (71)                   ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Decode:decode|RegDE:regde                                                                                          ; RegDE            ; work         ;
+;    |Execute:execute|                              ; 203 (0)             ; 68 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute                                                                                                    ; Execute          ; work         ;
+;       |Mux2:mux_op2|                              ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|Mux2:mux_op2                                                                                       ; Mux2             ; work         ;
+;       |Mux3:mux_ra1E|                             ; 36 (36)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|Mux3:mux_ra1E                                                                                      ; Mux3             ; work         ;
+;       |Mux3:mux_ra2E|                             ; 41 (41)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|Mux3:mux_ra2E                                                                                      ; Mux3             ; work         ;
+;       |RegEM:regem|                               ; 0 (0)               ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|RegEM:regem                                                                                        ; RegEM            ; work         ;
+;       |SuperALU:alu|                              ; 120 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu                                                                                       ; SuperALU         ; work         ;
+;          |ALU:alu|                                ; 120 (66)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu                                                                               ; ALU              ; work         ;
+;             |Sumador_Completo:sumador|            ; 54 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador                                                      ; Sumador_Completo ; work         ;
+;                |Sumador_1bit:forloop[0].sumador|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[0].sumador                      ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[10].sumador| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[10].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[11].sumador| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[11].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[12].sumador| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[12].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[13].sumador| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[13].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[14].sumador| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[14].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[15].sumador| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[15].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[16].sumador| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[16].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[17].sumador| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[17].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[18].sumador| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[18].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[19].sumador| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[19].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[1].sumador|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[1].sumador                      ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[20].sumador| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[20].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[21].sumador| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[21].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[22].sumador| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[22].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[23].sumador| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[23].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[24].sumador| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[24].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[25].sumador| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[25].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[26].sumador| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[26].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[27].sumador| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[27].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[28].sumador| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[28].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[29].sumador| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[29].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[2].sumador|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[2].sumador                      ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[31].sumador| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[31].sumador                     ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[3].sumador|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[3].sumador                      ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[4].sumador|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[4].sumador                      ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[5].sumador|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[5].sumador                      ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[6].sumador|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[6].sumador                      ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[7].sumador|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[7].sumador                      ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[8].sumador|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[8].sumador                      ; Sumador_1bit     ; work         ;
+;                |Sumador_1bit:forloop[9].sumador|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[9].sumador                      ; Sumador_1bit     ; work         ;
+;    |Fetch:fetch|                                  ; 10 (8)              ; 10 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Fetch:fetch                                                                                                        ; Fetch            ; work         ;
+;       |MemInst:MI|                                ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Fetch:fetch|MemInst:MI                                                                                             ; MemInst          ; work         ;
+;       |PCreg:PC|                                  ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Fetch:fetch|PCreg:PC                                                                                               ; PCreg            ; work         ;
+;       |RegFD:regfd|                               ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Fetch:fetch|RegFD:regfd                                                                                            ; RegFD            ; work         ;
+;    |Hazard_Unit:hazard|                           ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Hazard_Unit:hazard                                                                                                 ; Hazard_Unit      ; work         ;
+;    |Memory:memory|                                ; 123 (0)             ; 76 (0)                    ; 2097152           ; 0          ; 0    ; 0            ; |Pipeline_ARM|Memory:memory                                                                                                      ; Memory           ; work         ;
+;       |RAM:memdatos|                              ; 123 (0)             ; 9 (0)                     ; 2097152           ; 0          ; 0    ; 0            ; |Pipeline_ARM|Memory:memory|RAM:memdatos                                                                                         ; RAM              ; work         ;
+;          |altsyncram:altsyncram_component|        ; 123 (0)             ; 9 (0)                     ; 2097152           ; 0          ; 0    ; 0            ; |Pipeline_ARM|Memory:memory|RAM:memdatos|altsyncram:altsyncram_component                                                         ; altsyncram       ; work         ;
+;             |altsyncram_c6m2:auto_generated|      ; 123 (0)             ; 9 (9)                     ; 2097152           ; 0          ; 0    ; 0            ; |Pipeline_ARM|Memory:memory|RAM:memdatos|altsyncram:altsyncram_component|altsyncram_c6m2:auto_generated                          ; altsyncram_c6m2  ; work         ;
+;                |decode_61a:rden_decode_a|         ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Memory:memory|RAM:memdatos|altsyncram:altsyncram_component|altsyncram_c6m2:auto_generated|decode_61a:rden_decode_a ; decode_61a       ; work         ;
+;                |decode_61a:rden_decode_b|         ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Memory:memory|RAM:memdatos|altsyncram:altsyncram_component|altsyncram_c6m2:auto_generated|decode_61a:rden_decode_b ; decode_61a       ; work         ;
+;                |decode_dla:decode2|               ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Memory:memory|RAM:memdatos|altsyncram:altsyncram_component|altsyncram_c6m2:auto_generated|decode_dla:decode2       ; decode_dla       ; work         ;
+;                |mux_ahb:mux4|                     ; 96 (96)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Memory:memory|RAM:memdatos|altsyncram:altsyncram_component|altsyncram_c6m2:auto_generated|mux_ahb:mux4             ; mux_ahb          ; work         ;
+;       |RegMW:regmw|                               ; 0 (0)               ; 67 (67)                   ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Memory:memory|RegMW:regmw                                                                                          ; RegMW            ; work         ;
+;    |Mux2:mux_wb|                                  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|Mux2:mux_wb                                                                                                        ; Mux2             ; work         ;
+;    |VGAController:vga|                            ; 111 (85)            ; 20 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|VGAController:vga                                                                                                  ; VGAController    ; work         ;
+;       |ContadorNeg:HCount_Contador|               ; 11 (11)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|VGAController:vga|ContadorNeg:HCount_Contador                                                                      ; ContadorNeg      ; work         ;
+;       |ContadorNeg:VCount_Contador|               ; 11 (11)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|VGAController:vga|ContadorNeg:VCount_Contador                                                                      ; ContadorNeg      ; work         ;
+;       |FlipFlop_SR:HON|                           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|VGAController:vga|FlipFlop_SR:HON                                                                                  ; FlipFlop_SR      ; work         ;
+;       |FlipFlop_SR:HSYNCOUT|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|VGAController:vga|FlipFlop_SR:HSYNCOUT                                                                             ; FlipFlop_SR      ; work         ;
+;       |FlipFlop_SR:VON|                           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|VGAController:vga|FlipFlop_SR:VON                                                                                  ; FlipFlop_SR      ; work         ;
+;       |FlipFlop_SR:VSYNCOUT|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Pipeline_ARM|VGAController:vga|FlipFlop_SR:VSYNCOUT                                                                             ; FlipFlop_SR      ; work         ;
++---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                ;
++------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+---------+----------------------------+
+; Name                                                                                                 ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF                        ;
++------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+---------+----------------------------+
+; Memory:memory|RAM:memdatos|altsyncram:altsyncram_component|altsyncram_c6m2:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; 65536        ; 32           ; 65536        ; 32           ; 2097152 ; D:\ArquiII\Pixeles\RAM.mif ;
++------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+---------+----------------------------+
+
+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Independent 18x18 plus 36       ; 1           ;
+; Total number of DSP blocks      ; 1           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 1           ;
++---------------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                      ;
++--------+--------------+---------+--------------+--------------+------------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                          ; IP Include File ;
++--------+--------------+---------+--------------+--------------+------------------------------------------+-----------------+
+; Altera ; RAM: 2-PORT  ; 17.1    ; N/A          ; N/A          ; |Pipeline_ARM|Memory:memory|RAM:memdatos ; RAM.v           ;
++--------+--------------+---------+--------------+--------------+------------------------------------------+-----------------+
+
+
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; VGAController:vga|FlipFlop_SR:VSYNCOUT|Q~0             ;   ;
+; VGAController:vga|FlipFlop_SR:HSYNCOUT|Q~0             ;   ;
+; VGAController:vga|FlipFlop_SR:HON|Q~0                  ;   ;
+; VGAController:vga|FlipFlop_SR:VON|Q~0                  ;   ;
+; Number of logic cells representing combinational loops ; 4 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                             ;
++------------------------------------------------------------------------------------------------------------+---------------------------------------------------+
+; Register name                                                                                              ; Reason for Removal                                ;
++------------------------------------------------------------------------------------------------------------+---------------------------------------------------+
+; Memory:memory|RAM:memdatos|altsyncram:altsyncram_component|altsyncram_c6m2:auto_generated|address_reg_a[0] ; Merged with Memory:memory|RegMW:regmw|ALUOutW[13] ;
+; Memory:memory|RAM:memdatos|altsyncram:altsyncram_component|altsyncram_c6m2:auto_generated|address_reg_a[1] ; Merged with Memory:memory|RegMW:regmw|ALUOutW[14] ;
+; Memory:memory|RAM:memdatos|altsyncram:altsyncram_component|altsyncram_c6m2:auto_generated|address_reg_a[2] ; Merged with Memory:memory|RegMW:regmw|ALUOutW[15] ;
+; Decode:decode|RegDE:regde|exto[23..31]                                                                     ; Merged with Decode:decode|RegDE:regde|exto[22]    ;
+; Decode:decode|RegDE:regde|PCSrcE                                                                           ; Merged with Decode:decode|RegDE:regde|BranchE     ;
+; Fetch:fetch|RegFD:regfd|instD[0..7,9,10,13..16,18,19,22,24,25]                                             ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|RegDE:regde|RA1E[0..2]                                                                       ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|RegDE:regde|RA2E[2]                                                                          ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|RegDE:regde|exto[0..6,11..22]                                                                ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|RegDE:regde|ALUControlE[2]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|RegDE:regde|ao3[2]                                                                           ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|RegDE:regde|BranchE                                                                          ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|RegDE:regde|CondE                                                                            ; Stuck at GND due to stuck port data_in            ;
+; Execute:execute|Condition_Unit:condUnit|flopenr:flagreg1|q[0]                                              ; Lost fanout                                       ;
+; Decode:decode|RegDE:regde|FlagWriteE[1]                                                                    ; Lost fanout                                       ;
+; StopCounter:stopcount|stopCont                                                                             ; Stuck at GND due to stuck port clock              ;
+; Execute:execute|RegEM:regem|WA3M[2]                                                                        ; Stuck at GND due to stuck port data_in            ;
+; Memory:memory|RegMW:regmw|WA3W[2]                                                                          ; Stuck at GND due to stuck port data_in            ;
+; Execute:execute|RegEM:regem|PCSrcM                                                                         ; Stuck at GND due to stuck port data_in            ;
+; Memory:memory|RegMW:regmw|PCSrcW                                                                           ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][0]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][0]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][0]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][0]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Fetch:fetch|PCreg:PC|outPC[0]                                                                              ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[7][31]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][31]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][31]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][31]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][30]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][30]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][30]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][30]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][29]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][29]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][29]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][29]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][28]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][28]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][28]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][28]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][27]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][27]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][27]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][27]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][26]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][26]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][26]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][26]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][25]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][25]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][25]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][25]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][24]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][24]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][24]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][24]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][23]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][23]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][23]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][23]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][22]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][22]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][22]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][22]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][21]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][21]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][21]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][21]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][20]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][20]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][20]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][20]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][19]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][19]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][19]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][19]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][18]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][18]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][18]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][18]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][17]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][17]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][17]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][17]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][16]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][16]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][16]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][16]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][15]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][15]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][15]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][15]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][14]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][14]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][14]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][14]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][13]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][13]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][13]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][13]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][12]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][12]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][12]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][12]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][11]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][11]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][11]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][11]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][10]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][10]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][10]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][10]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][9]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][9]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][9]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][9]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][8]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][8]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][8]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][8]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][7]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][7]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][7]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][7]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][6]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][6]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][6]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][6]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][5]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][5]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][5]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][5]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][4]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][4]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][4]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][4]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][3]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][3]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][3]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][3]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][2]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][2]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][2]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][2]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[7][1]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[6][1]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[5][1]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[4][1]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Fetch:fetch|PCreg:PC|outPC[1]                                                                              ; Lost fanout                                       ;
+; Decode:decode|RegDE:regde|exto[7,9,10]                                                                     ; Stuck at GND due to stuck port data_in            ;
+; Fetch:fetch|RegFD:regfd|instD[8,12,17,20,21]                                                               ; Merged with Fetch:fetch|RegFD:regfd|instD[11]     ;
+; Memory:memory|RegMW:regmw|WA3W[1]                                                                          ; Merged with Memory:memory|RegMW:regmw|WA3W[0]     ;
+; Execute:execute|RegEM:regem|WA3M[1]                                                                        ; Merged with Execute:execute|RegEM:regem|WA3M[0]   ;
+; Decode:decode|RegDE:regde|RA2E[1]                                                                          ; Merged with Decode:decode|RegDE:regde|RA2E[0]     ;
+; Decode:decode|RegDE:regde|MemtoRegE                                                                        ; Merged with Decode:decode|RegDE:regde|ALUSrcE     ;
+; Decode:decode|RegDE:regde|ao3[1]                                                                           ; Merged with Decode:decode|RegDE:regde|ao3[0]      ;
+; Decode:decode|BancoRegistros:BR|rf[1][0]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][0]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][1]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][1]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][2]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][2]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][3]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][3]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][4]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][4]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][5]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][5]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][6]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][6]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][7]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][7]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][8]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][8]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][9]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][9]                                                                   ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][10]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][10]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][11]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][11]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][12]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][12]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][13]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][13]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][14]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][14]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][15]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][15]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][16]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][16]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][17]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][17]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][18]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][18]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][19]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][19]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][20]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][20]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][21]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][21]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][22]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][22]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][23]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][23]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][24]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][24]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][25]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][25]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][26]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][26]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][27]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][27]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][28]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][28]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][29]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][29]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][30]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][30]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[1][31]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[2][31]                                                                  ; Stuck at GND due to stuck port data_in            ;
+; Fetch:fetch|PCreg:PC|outPC[10..31]                                                                         ; Lost fanout                                       ;
+; Decode:decode|RegDE:regde|RA2E[0]                                                                          ; Stuck at GND due to stuck port data_in            ;
+; Decode:decode|BancoRegistros:BR|rf[3][0]                                                                   ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][1]                                                                   ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][2]                                                                   ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][3]                                                                   ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][4]                                                                   ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][5]                                                                   ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][6]                                                                   ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][7]                                                                   ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][8]                                                                   ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][9]                                                                   ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][10]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][11]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][12]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][13]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][14]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][15]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][16]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][17]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][18]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][19]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][20]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][21]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][22]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][23]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][24]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][25]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][26]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][27]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][28]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][29]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][30]                                                                  ; Lost fanout                                       ;
+; Decode:decode|BancoRegistros:BR|rf[3][31]                                                                  ; Lost fanout                                       ;
+; Total Number of Removed Registers = 328                                                                    ;                                                   ;
++------------------------------------------------------------------------------------------------------------+---------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                         ;
++-----------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; Register name                     ; Reason for Removal        ; Registers Removed due to This Register                                              ;
++-----------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; StopCounter:stopcount|stopCont    ; Stuck at GND              ; Memory:memory|RegMW:regmw|WA3W[2], Memory:memory|RegMW:regmw|PCSrcW,                ;
+;                                   ; due to stuck port clock   ; Decode:decode|BancoRegistros:BR|rf[7][0], Decode:decode|BancoRegistros:BR|rf[6][0], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][0], Decode:decode|BancoRegistros:BR|rf[4][0], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][31],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][31],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][31],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][31],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][30],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][30],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][30],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][30],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][29],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][29],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][29],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][29],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][28],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][28],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][28],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][28],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][27],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][27],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][27],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][27],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][26],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][26],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][26],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][26],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][25],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][25],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][25],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][25],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][24],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][24],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][24],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][24],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][23],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][23],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][23],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][23],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][22],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][22],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][22],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][22],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][21],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][21],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][21],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][21],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][20],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][20],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][20],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][20],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][19],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][19],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][19],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][19],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][18],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][18],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][18],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][18],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][17],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][17],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][17],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][17],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][16],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][16],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][16],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][16],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][15],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][15],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][15],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][15],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][14],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][14],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][14],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][14],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][13],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][13],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][13],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][13],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][12],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][12],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][12],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][12],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][11],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][11],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][11],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][11],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][10],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[6][10],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][10],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[4][10],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][9], Decode:decode|BancoRegistros:BR|rf[6][9], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][9], Decode:decode|BancoRegistros:BR|rf[4][9], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][8], Decode:decode|BancoRegistros:BR|rf[6][8], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][8], Decode:decode|BancoRegistros:BR|rf[4][8], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][7], Decode:decode|BancoRegistros:BR|rf[6][7], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][7], Decode:decode|BancoRegistros:BR|rf[4][7], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][6], Decode:decode|BancoRegistros:BR|rf[6][6], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][6], Decode:decode|BancoRegistros:BR|rf[4][6], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][5], Decode:decode|BancoRegistros:BR|rf[6][5], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][5], Decode:decode|BancoRegistros:BR|rf[4][5], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][4], Decode:decode|BancoRegistros:BR|rf[6][4], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][4], Decode:decode|BancoRegistros:BR|rf[4][4], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][3], Decode:decode|BancoRegistros:BR|rf[6][3], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][3], Decode:decode|BancoRegistros:BR|rf[4][3], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][2], Decode:decode|BancoRegistros:BR|rf[6][2], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][2], Decode:decode|BancoRegistros:BR|rf[4][2], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[7][1], Decode:decode|BancoRegistros:BR|rf[6][1], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[5][1], Decode:decode|BancoRegistros:BR|rf[4][1], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][0], Decode:decode|BancoRegistros:BR|rf[2][0], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][1], Decode:decode|BancoRegistros:BR|rf[2][1], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][2], Decode:decode|BancoRegistros:BR|rf[2][2], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][3], Decode:decode|BancoRegistros:BR|rf[2][3], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][4], Decode:decode|BancoRegistros:BR|rf[2][4], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][5], Decode:decode|BancoRegistros:BR|rf[2][5], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][6], Decode:decode|BancoRegistros:BR|rf[2][6], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][7], Decode:decode|BancoRegistros:BR|rf[2][7], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][8], Decode:decode|BancoRegistros:BR|rf[2][8], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][9], Decode:decode|BancoRegistros:BR|rf[2][9], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][10],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][10],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][11],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][11],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][12],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][12],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][13],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][13],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][14],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][14],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][15],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][15],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][16],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][16],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][17],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][17],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][18],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][18],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][19],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][19],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][20],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][20],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][21],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][21],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][22],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][22],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][23],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][23],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][24],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][24],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][25],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][25],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][26],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][26],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][27],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][27],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][28],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][28],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][29],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][29],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][30],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][30],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[1][31],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[2][31]                                           ;
+; Fetch:fetch|RegFD:regfd|instD[0]  ; Stuck at GND              ; Decode:decode|RegDE:regde|exto[0], Decode:decode|RegDE:regde|exto[2],               ;
+;                                   ; due to stuck port data_in ; Fetch:fetch|PCreg:PC|outPC[0], Fetch:fetch|PCreg:PC|outPC[1],                       ;
+;                                   ;                           ; Decode:decode|RegDE:regde|RA2E[0], Decode:decode|BancoRegistros:BR|rf[3][0],        ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][1], Decode:decode|BancoRegistros:BR|rf[3][2], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][3], Decode:decode|BancoRegistros:BR|rf[3][4], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][5], Decode:decode|BancoRegistros:BR|rf[3][6], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][7], Decode:decode|BancoRegistros:BR|rf[3][8], ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][9],                                           ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][10],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][11],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][12],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][13],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][14],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][15],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][16],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][17],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][18],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][19],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][20],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][21],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][22],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][23],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][24],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][25],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][26],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][27],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][28],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][29],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][30],                                          ;
+;                                   ;                           ; Decode:decode|BancoRegistros:BR|rf[3][31]                                           ;
+; Fetch:fetch|PCreg:PC|outPC[31]    ; Lost Fanouts              ; Fetch:fetch|PCreg:PC|outPC[30], Fetch:fetch|PCreg:PC|outPC[29],                     ;
+;                                   ;                           ; Fetch:fetch|PCreg:PC|outPC[28], Fetch:fetch|PCreg:PC|outPC[27],                     ;
+;                                   ;                           ; Fetch:fetch|PCreg:PC|outPC[26], Fetch:fetch|PCreg:PC|outPC[25],                     ;
+;                                   ;                           ; Fetch:fetch|PCreg:PC|outPC[24], Fetch:fetch|PCreg:PC|outPC[23],                     ;
+;                                   ;                           ; Fetch:fetch|PCreg:PC|outPC[22], Fetch:fetch|PCreg:PC|outPC[21],                     ;
+;                                   ;                           ; Fetch:fetch|PCreg:PC|outPC[20], Fetch:fetch|PCreg:PC|outPC[19],                     ;
+;                                   ;                           ; Fetch:fetch|PCreg:PC|outPC[18], Fetch:fetch|PCreg:PC|outPC[17],                     ;
+;                                   ;                           ; Fetch:fetch|PCreg:PC|outPC[16], Fetch:fetch|PCreg:PC|outPC[15],                     ;
+;                                   ;                           ; Fetch:fetch|PCreg:PC|outPC[14], Fetch:fetch|PCreg:PC|outPC[13],                     ;
+;                                   ;                           ; Fetch:fetch|PCreg:PC|outPC[12], Fetch:fetch|PCreg:PC|outPC[11],                     ;
+;                                   ;                           ; Fetch:fetch|PCreg:PC|outPC[10]                                                      ;
+; Fetch:fetch|RegFD:regfd|instD[24] ; Stuck at GND              ; Decode:decode|RegDE:regde|exto[22], Decode:decode|RegDE:regde|exto[19],             ;
+;                                   ; due to stuck port data_in ; Decode:decode|RegDE:regde|exto[14], Decode:decode|RegDE:regde|exto[13]              ;
+; Fetch:fetch|RegFD:regfd|instD[25] ; Stuck at GND              ; Decode:decode|RegDE:regde|CondE,                                                    ;
+;                                   ; due to stuck port data_in ; Execute:execute|Condition_Unit:condUnit|flopenr:flagreg1|q[0],                      ;
+;                                   ;                           ; Decode:decode|RegDE:regde|FlagWriteE[1], Execute:execute|RegEM:regem|PCSrcM         ;
+; Fetch:fetch|RegFD:regfd|instD[1]  ; Stuck at GND              ; Decode:decode|RegDE:regde|exto[3], Decode:decode|RegDE:regde|exto[1]                ;
+;                                   ; due to stuck port data_in ;                                                                                     ;
+; Fetch:fetch|RegFD:regfd|instD[2]  ; Stuck at GND              ; Decode:decode|RegDE:regde|RA2E[2], Decode:decode|RegDE:regde|exto[4]                ;
+;                                   ; due to stuck port data_in ;                                                                                     ;
+; Fetch:fetch|RegFD:regfd|instD[10] ; Stuck at GND              ; Decode:decode|RegDE:regde|exto[12], Decode:decode|RegDE:regde|exto[10]              ;
+;                                   ; due to stuck port data_in ;                                                                                     ;
+; Fetch:fetch|RegFD:regfd|instD[14] ; Stuck at GND              ; Decode:decode|RegDE:regde|RA1E[0], Decode:decode|RegDE:regde|exto[16]               ;
+;                                   ; due to stuck port data_in ;                                                                                     ;
+; Fetch:fetch|RegFD:regfd|instD[15] ; Stuck at GND              ; Decode:decode|RegDE:regde|RA1E[1], Decode:decode|RegDE:regde|exto[17]               ;
+;                                   ; due to stuck port data_in ;                                                                                     ;
+; Fetch:fetch|RegFD:regfd|instD[16] ; Stuck at GND              ; Decode:decode|RegDE:regde|RA1E[2], Decode:decode|RegDE:regde|exto[18]               ;
+;                                   ; due to stuck port data_in ;                                                                                     ;
+; Fetch:fetch|RegFD:regfd|instD[18] ; Stuck at GND              ; Decode:decode|RegDE:regde|exto[20], Decode:decode|RegDE:regde|ALUControlE[2]        ;
+;                                   ; due to stuck port data_in ;                                                                                     ;
+; Fetch:fetch|RegFD:regfd|instD[3]  ; Stuck at GND              ; Decode:decode|RegDE:regde|exto[5]                                                   ;
+;                                   ; due to stuck port data_in ;                                                                                     ;
+; Fetch:fetch|RegFD:regfd|instD[4]  ; Stuck at GND              ; Decode:decode|RegDE:regde|exto[6]                                                   ;
+;                                   ; due to stuck port data_in ;                                                                                     ;
+; Fetch:fetch|RegFD:regfd|instD[5]  ; Stuck at GND              ; Decode:decode|RegDE:regde|exto[7]                                                   ;
+;                                   ; due to stuck port data_in ;                                                                                     ;
+; Fetch:fetch|RegFD:regfd|instD[7]  ; Stuck at GND              ; Decode:decode|RegDE:regde|exto[9]                                                   ;
+;                                   ; due to stuck port data_in ;                                                                                     ;
+; Fetch:fetch|RegFD:regfd|instD[9]  ; Stuck at GND              ; Decode:decode|RegDE:regde|exto[11]                                                  ;
+;                                   ; due to stuck port data_in ;                                                                                     ;
+; Fetch:fetch|RegFD:regfd|instD[13] ; Stuck at GND              ; Decode:decode|RegDE:regde|exto[15]                                                  ;
+;                                   ; due to stuck port data_in ;                                                                                     ;
+; Fetch:fetch|RegFD:regfd|instD[19] ; Stuck at GND              ; Decode:decode|RegDE:regde|exto[21]                                                  ;
+;                                   ; due to stuck port data_in ;                                                                                     ;
+; Decode:decode|RegDE:regde|ao3[2]  ; Stuck at GND              ; Execute:execute|RegEM:regem|WA3M[2]                                                 ;
+;                                   ; due to stuck port data_in ;                                                                                     ;
++-----------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 278   ;
+; Number of registers using Synchronous Clear  ; 118   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 8     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 42    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Pipeline_ARM|Decode:decode|RegDE:regde|exto[8]               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Pipeline_ARM|Decode:decode|BancoRegistros:BR|rf[0][9]        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Pipeline_ARM|Decode:decode|BancoRegistros:BR|rf[1][31]       ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Pipeline_ARM|Decode:decode|BancoRegistros:BR|rf[2][26]       ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Pipeline_ARM|Decode:decode|BancoRegistros:BR|rf[3][18]       ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |Pipeline_ARM|Decode:decode|RegDE:regde|rdo2[20]              ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; Yes        ; |Pipeline_ARM|Memory:memory|RegMW:regmw|ReadDataW[20]         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Pipeline_ARM|Execute:execute|Mux3:mux_ra1E|y[4]              ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Pipeline_ARM|Execute:execute|Mux3:mux_ra2E|y[9]              ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Pipeline_ARM|Execute:execute|SuperALU:alu|ALU:alu|Result[26] ;
+; 9:1                ; 24 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; No         ; |Pipeline_ARM|VGAController:vga|RedOut[1]                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Memory:memory|RAM:memdatos|altsyncram:altsyncram_component|altsyncram_c6m2:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                 ;
++---------------------------------+--------------------+------+----------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                  ;
++---------------------------------+--------------------+------+----------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGAController:vga|ContadorNeg:HCount_Contador ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; N              ; 10    ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGAController:vga|ContadorNeg:VCount_Contador ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; N              ; 10    ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Fetch:fetch|PCreg:PC ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; N              ; 32    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Fetch:fetch|Mux2:mux_pc4 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; N              ; 32    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Fetch:fetch|Mux2:mux_pcnext ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; N              ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Decode:decode|Mux2:mux_ra1 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; N              ; 3     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Decode:decode|Mux2:mux_ra2 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; N              ; 3     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Execute:execute|Mux3:mux_ra1E ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; N              ; 32    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Execute:execute|Mux3:mux_ra2E ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; N              ; 32    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Execute:execute|Mux2:mux_op2 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; N              ; 32    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Execute:execute|SuperALU:alu|ALU:alu ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Execute:execute|Condition_Unit:condUnit|flopenr:flagreg1 ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; WIDTH          ; 2     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Execute:execute|Condition_Unit:condUnit|flopenr:flagreg0 ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; WIDTH          ; 2     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Memory:memory|RAM:memdatos|altsyncram:altsyncram_component ;
++------------------------------------+----------------------------+---------------------------------------+
+; Parameter Name                     ; Value                      ; Type                                  ;
++------------------------------------+----------------------------+---------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                          ; Untyped                               ;
+; AUTO_CARRY_CHAINS                  ; ON                         ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS               ; OFF                        ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS                ; ON                         ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                        ; IGNORE_CASCADE                        ;
+; WIDTH_BYTEENA                      ; 1                          ; Untyped                               ;
+; OPERATION_MODE                     ; BIDIR_DUAL_PORT            ; Untyped                               ;
+; WIDTH_A                            ; 32                         ; Signed Integer                        ;
+; WIDTHAD_A                          ; 16                         ; Signed Integer                        ;
+; NUMWORDS_A                         ; 65536                      ; Signed Integer                        ;
+; OUTDATA_REG_A                      ; CLOCK0                     ; Untyped                               ;
+; ADDRESS_ACLR_A                     ; NONE                       ; Untyped                               ;
+; OUTDATA_ACLR_A                     ; NONE                       ; Untyped                               ;
+; WRCONTROL_ACLR_A                   ; NONE                       ; Untyped                               ;
+; INDATA_ACLR_A                      ; NONE                       ; Untyped                               ;
+; BYTEENA_ACLR_A                     ; NONE                       ; Untyped                               ;
+; WIDTH_B                            ; 32                         ; Signed Integer                        ;
+; WIDTHAD_B                          ; 16                         ; Signed Integer                        ;
+; NUMWORDS_B                         ; 65536                      ; Signed Integer                        ;
+; INDATA_REG_B                       ; CLOCK1                     ; Untyped                               ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                     ; Untyped                               ;
+; RDCONTROL_REG_B                    ; CLOCK1                     ; Untyped                               ;
+; ADDRESS_REG_B                      ; CLOCK1                     ; Untyped                               ;
+; OUTDATA_REG_B                      ; CLOCK1                     ; Untyped                               ;
+; BYTEENA_REG_B                      ; CLOCK1                     ; Untyped                               ;
+; INDATA_ACLR_B                      ; NONE                       ; Untyped                               ;
+; WRCONTROL_ACLR_B                   ; NONE                       ; Untyped                               ;
+; ADDRESS_ACLR_B                     ; NONE                       ; Untyped                               ;
+; OUTDATA_ACLR_B                     ; NONE                       ; Untyped                               ;
+; RDCONTROL_ACLR_B                   ; NONE                       ; Untyped                               ;
+; BYTEENA_ACLR_B                     ; NONE                       ; Untyped                               ;
+; WIDTH_BYTEENA_A                    ; 1                          ; Signed Integer                        ;
+; WIDTH_BYTEENA_B                    ; 1                          ; Signed Integer                        ;
+; RAM_BLOCK_TYPE                     ; AUTO                       ; Untyped                               ;
+; BYTE_SIZE                          ; 8                          ; Untyped                               ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                  ; Untyped                               ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ       ; Untyped                               ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ       ; Untyped                               ;
+; INIT_FILE                          ; D:\ArquiII\Pixeles\RAM.mif ; Untyped                               ;
+; INIT_FILE_LAYOUT                   ; PORT_A                     ; Untyped                               ;
+; MAXIMUM_DEPTH                      ; 0                          ; Untyped                               ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                     ; Untyped                               ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS                     ; Untyped                               ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                     ; Untyped                               ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS                     ; Untyped                               ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN            ; Untyped                               ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN            ; Untyped                               ;
+; ENABLE_ECC                         ; FALSE                      ; Untyped                               ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                      ; Untyped                               ;
+; WIDTH_ECCSTATUS                    ; 3                          ; Untyped                               ;
+; DEVICE_FAMILY                      ; Cyclone V                  ; Untyped                               ;
+; CBXI_PARAMETER                     ; altsyncram_c6m2            ; Untyped                               ;
++------------------------------------+----------------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux2:mux_wb ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; N              ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                       ;
++-------------------------------------------+------------------------------------------------------------+
+; Name                                      ; Value                                                      ;
++-------------------------------------------+------------------------------------------------------------+
+; Number of entity instances                ; 1                                                          ;
+; Entity Instance                           ; Memory:memory|RAM:memdatos|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; BIDIR_DUAL_PORT                                            ;
+;     -- WIDTH_A                            ; 32                                                         ;
+;     -- NUMWORDS_A                         ; 65536                                                      ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                     ;
+;     -- WIDTH_B                            ; 32                                                         ;
+;     -- NUMWORDS_B                         ; 65536                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                     ;
+;     -- OUTDATA_REG_B                      ; CLOCK1                                                     ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                       ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                  ;
++-------------------------------------------+------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "Memory:memory|RAM:memdatos" ;
++--------+-------+----------+----------------------------+
+; Port   ; Type  ; Severity ; Details                    ;
++--------+-------+----------+----------------------------+
+; data_b ; Input ; Info     ; Stuck at GND               ;
+; wren_b ; Input ; Info     ; Stuck at GND               ;
++--------+-------+----------+----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Memory:memory"                                                                                 ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; VGAData[31..24] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "Decode:decode|Mux2:mux_ra1" ;
++------+-------+----------+------------------------------+
+; Port ; Type  ; Severity ; Details                      ;
++------+-------+----------+------------------------------+
+; d1   ; Input ; Info     ; Stuck at VCC                 ;
++------+-------+----------+------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 278                         ;
+;     ENA               ; 2                           ;
+;     ENA CLR           ; 8                           ;
+;     ENA SCLR          ; 32                          ;
+;     SCLR              ; 86                          ;
+;     plain             ; 150                         ;
+; arriav_lcell_comb     ; 515                         ;
+;     arith             ; 28                          ;
+;         1 data inputs ; 28                          ;
+;     extend            ; 5                           ;
+;         7 data inputs ; 5                           ;
+;     normal            ; 482                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 34                          ;
+;         3 data inputs ; 107                         ;
+;         4 data inputs ; 35                          ;
+;         5 data inputs ; 123                         ;
+;         6 data inputs ; 177                         ;
+; arriav_mac            ; 1                           ;
+; boundary_port         ; 187                         ;
+; stratixv_ram_block    ; 256                         ;
+;                       ;                             ;
+; Max LUT depth         ; 15.00                       ;
+; Average LUT depth     ; 4.41                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed Jul 08 21:48:08 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SIMD_Proc -c SIMD_Proc
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file vgacontroller_tb.sv
+    Info (12023): Found entity 1: VGAController_tb File: D:/ArquiII/Proyecto#2/VGAController_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vgacontroller.sv
+    Info (12023): Found entity 1: VGAController File: D:/ArquiII/Proyecto#2/VGAController.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file umbral.sv
+    Info (12023): Found entity 1: Umbral File: D:/ArquiII/Proyecto#2/Umbral.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file testbench_pipeline.sv
+    Info (12023): Found entity 1: testbench_Pipeline File: D:/ArquiII/Proyecto#2/testbench_Pipeline.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file tb_hazard_unit.sv
+    Info (12023): Found entity 1: tb_Hazard_Unit File: D:/ArquiII/Proyecto#2/tb_Hazard_Unit.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file superalu_tb.sv
+    Info (12023): Found entity 1: SuperALU_tb File: D:/ArquiII/Proyecto#2/SuperALU_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file superalu.sv
+    Info (12023): Found entity 1: SuperALU File: D:/ArquiII/Proyecto#2/SuperALU.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sumador_completo_tb.sv
+    Info (12023): Found entity 1: Sumador_Completo_tb File: D:/ArquiII/Proyecto#2/Sumador_Completo_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sumador_completo.sv
+    Info (12023): Found entity 1: Sumador_Completo File: D:/ArquiII/Proyecto#2/Sumador_Completo.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sumador_1bit.sv
+    Info (12023): Found entity 1: Sumador_1bit File: D:/ArquiII/Proyecto#2/Sumador_1bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file stopcounter_testbench.sv
+    Info (12023): Found entity 1: StopCounter_testbench File: D:/ArquiII/Proyecto#2/StopCounter_testbench.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file stopcounter.sv
+    Info (12023): Found entity 1: StopCounter File: D:/ArquiII/Proyecto#2/StopCounter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file regmw.sv
+    Info (12023): Found entity 1: RegMW File: D:/ArquiII/Proyecto#2/RegMW.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file regfd.sv
+    Info (12023): Found entity 1: RegFD File: D:/ArquiII/Proyecto#2/RegFD.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file regem.sv
+    Info (12023): Found entity 1: RegEM File: D:/ArquiII/Proyecto#2/RegEM.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file regde.sv
+    Info (12023): Found entity 1: RegDE File: D:/ArquiII/Proyecto#2/RegDE.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ram.v
+    Info (12023): Found entity 1: RAM File: D:/ArquiII/Proyecto#2/RAM.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file pixprom_testbench.sv
+    Info (12023): Found entity 1: PixProm_testbench File: D:/ArquiII/Proyecto#2/PixProm_testbench.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pixprom.sv
+    Info (12023): Found entity 1: PixProm File: D:/ArquiII/Proyecto#2/PixProm.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pipeline_arm.sv
+    Info (12023): Found entity 1: Pipeline_ARM File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pcreg.sv
+    Info (12023): Found entity 1: PCreg File: D:/ArquiII/Proyecto#2/PCreg.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pasodatos.sv
+    Info (12023): Found entity 1: PasoDatos File: D:/ArquiII/Proyecto#2/PasoDatos.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pasocontrol.sv
+    Info (12023): Found entity 1: PasoControl File: D:/ArquiII/Proyecto#2/PasoControl.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux3.sv
+    Info (12023): Found entity 1: Mux3 File: D:/ArquiII/Proyecto#2/Mux3.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux2.sv
+    Info (12023): Found entity 1: Mux2 File: D:/ArquiII/Proyecto#2/Mux2.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memory.sv
+    Info (12023): Found entity 1: Memory File: D:/ArquiII/Proyecto#2/Memory.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file meminst_testbench.sv
+    Info (12023): Found entity 1: MemInst_testbench File: D:/ArquiII/Proyecto#2/MemInst_testbench.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file meminst.sv
+    Info (12023): Found entity 1: MemInst File: D:/ArquiII/Proyecto#2/MemInst.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memdatos.sv
+    Info (12023): Found entity 1: MemDatos File: D:/ArquiII/Proyecto#2/MemDatos.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hazard_unit.sv
+    Info (12023): Found entity 1: Hazard_Unit File: D:/ArquiII/Proyecto#2/Hazard_Unit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file flopenr.sv
+    Info (12023): Found entity 1: flopenr File: D:/ArquiII/Proyecto#2/flopenr.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file flipflop_sr.sv
+    Info (12023): Found entity 1: FlipFlop_SR File: D:/ArquiII/Proyecto#2/FlipFlop_SR.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fetch_testbench.sv
+    Info (12023): Found entity 1: Fetch_testbench File: D:/ArquiII/Proyecto#2/Fetch_testbench.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fetch.sv
+    Info (12023): Found entity 1: Fetch File: D:/ArquiII/Proyecto#2/Fetch.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file extend_tb.sv
+    Info (12023): Found entity 1: Extend_TB File: D:/ArquiII/Proyecto#2/Extend_TB.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file extend.sv
+    Info (12023): Found entity 1: Extend File: D:/ArquiII/Proyecto#2/Extend.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file execute.sv
+    Info (12023): Found entity 1: Execute File: D:/ArquiII/Proyecto#2/Execute.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decode.sv
+    Info (12023): Found entity 1: Decode File: D:/ArquiII/Proyecto#2/Decode.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file control_unit.sv
+    Info (12023): Found entity 1: Control_Unit File: D:/ArquiII/Proyecto#2/Control_Unit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file contadorneg.sv
+    Info (12023): Found entity 1: ContadorNeg File: D:/ArquiII/Proyecto#2/ContadorNeg.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file condition_unit.sv
+    Info (12023): Found entity 1: Condition_Unit File: D:/ArquiII/Proyecto#2/Condition_Unit.sv Line: 1
+    Info (12023): Found entity 2: condcheck File: D:/ArquiII/Proyecto#2/Condition_Unit.sv Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file bancoregistros.sv
+    Info (12023): Found entity 1: BancoRegistros File: D:/ArquiII/Proyecto#2/BancoRegistros.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.sv
+    Info (12023): Found entity 1: ALU_tb File: D:/ArquiII/Proyecto#2/ALU_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
+    Info (12023): Found entity 1: ALU File: D:/ArquiII/Proyecto#2/ALU.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(19): created implicit net for "StopCont" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(62): created implicit net for "PCSrcW" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 62
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(62): created implicit net for "BranchTakenE" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 62
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(62): created implicit net for "StallF" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 62
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(62): created implicit net for "StallD" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 62
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(62): created implicit net for "FlushD" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 62
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(65): created implicit net for "RegWriteW" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 65
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(65): created implicit net for "FlushE" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 65
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(69): created implicit net for "PCSrcD" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 69
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(69): created implicit net for "PCSrcE" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 69
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(69): created implicit net for "RegWriteE" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 69
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(69): created implicit net for "MemtoRegE" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 69
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(69): created implicit net for "MemWriteE" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 69
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(69): created implicit net for "BranchE" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 69
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(69): created implicit net for "ALUSrcE" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 69
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(78): created implicit net for "PCSrcM" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 78
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(78): created implicit net for "RegWriteM" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 78
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(78): created implicit net for "MemWriteM" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 78
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(78): created implicit net for "MemtoRegM" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 78
+Warning (10236): Verilog HDL Implicit Net warning at Pipeline_ARM.sv(87): created implicit net for "MemtoRegW" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 87
+Warning (10236): Verilog HDL Implicit Net warning at PasoDatos.sv(27): created implicit net for "InstOut" File: D:/ArquiII/Proyecto#2/PasoDatos.sv Line: 27
+Info (12127): Elaborating entity "Pipeline_ARM" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at Pipeline_ARM.sv(21): truncated value with size 32 to match size of target (1) File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 21
+Info (12128): Elaborating entity "StopCounter" for hierarchy "StopCounter:stopcount" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 19
+Info (12128): Elaborating entity "VGAController" for hierarchy "VGAController:vga" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 43
+Info (12128): Elaborating entity "ContadorNeg" for hierarchy "VGAController:vga|ContadorNeg:HCount_Contador" File: D:/ArquiII/Proyecto#2/VGAController.sv Line: 21
+Info (12128): Elaborating entity "FlipFlop_SR" for hierarchy "VGAController:vga|FlipFlop_SR:HSYNCOUT" File: D:/ArquiII/Proyecto#2/VGAController.sv Line: 56
+Info (12128): Elaborating entity "Fetch" for hierarchy "Fetch:fetch" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 63
+Info (12128): Elaborating entity "PCreg" for hierarchy "Fetch:fetch|PCreg:PC" File: D:/ArquiII/Proyecto#2/Fetch.sv Line: 11
+Info (12128): Elaborating entity "Mux2" for hierarchy "Fetch:fetch|Mux2:mux_pc4" File: D:/ArquiII/Proyecto#2/Fetch.sv Line: 17
+Info (12128): Elaborating entity "MemInst" for hierarchy "Fetch:fetch|MemInst:MI" File: D:/ArquiII/Proyecto#2/Fetch.sv Line: 21
+Warning (10850): Verilog HDL warning at MemInst.sv(7): number of words (21) in memory file does not match the number of elements in the address range [0:255] File: D:/ArquiII/Proyecto#2/MemInst.sv Line: 7
+Warning (10030): Net "RAM.data_a" at MemInst.sv(4) has no driver or initial value, using a default initial value '0' File: D:/ArquiII/Proyecto#2/MemInst.sv Line: 4
+Warning (10030): Net "RAM.waddr_a" at MemInst.sv(4) has no driver or initial value, using a default initial value '0' File: D:/ArquiII/Proyecto#2/MemInst.sv Line: 4
+Warning (10030): Net "RAM.we_a" at MemInst.sv(4) has no driver or initial value, using a default initial value '0' File: D:/ArquiII/Proyecto#2/MemInst.sv Line: 4
+Info (12128): Elaborating entity "RegFD" for hierarchy "Fetch:fetch|RegFD:regfd" File: D:/ArquiII/Proyecto#2/Fetch.sv Line: 24
+Info (12128): Elaborating entity "Decode" for hierarchy "Decode:decode" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 71
+Info (12128): Elaborating entity "Control_Unit" for hierarchy "Decode:decode|Control_Unit:controlUnit" File: D:/ArquiII/Proyecto#2/Decode.sv Line: 39
+Info (12128): Elaborating entity "Mux2" for hierarchy "Decode:decode|Mux2:mux_ra1" File: D:/ArquiII/Proyecto#2/Decode.sv Line: 41
+Info (12128): Elaborating entity "BancoRegistros" for hierarchy "Decode:decode|BancoRegistros:BR" File: D:/ArquiII/Proyecto#2/Decode.sv Line: 44
+Info (12128): Elaborating entity "Extend" for hierarchy "Decode:decode|Extend:extend" File: D:/ArquiII/Proyecto#2/Decode.sv Line: 46
+Info (12128): Elaborating entity "RegDE" for hierarchy "Decode:decode|RegDE:regde" File: D:/ArquiII/Proyecto#2/Decode.sv Line: 63
+Info (12128): Elaborating entity "Execute" for hierarchy "Execute:execute" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 80
+Info (12128): Elaborating entity "Mux3" for hierarchy "Execute:execute|Mux3:mux_ra1E" File: D:/ArquiII/Proyecto#2/Execute.sv Line: 17
+Info (12128): Elaborating entity "SuperALU" for hierarchy "Execute:execute|SuperALU:alu" File: D:/ArquiII/Proyecto#2/Execute.sv Line: 21
+Info (12128): Elaborating entity "ALU" for hierarchy "Execute:execute|SuperALU:alu|ALU:alu" File: D:/ArquiII/Proyecto#2/SuperALU.sv Line: 10
+Info (12128): Elaborating entity "Sumador_Completo" for hierarchy "Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador" File: D:/ArquiII/Proyecto#2/ALU.sv Line: 28
+Info (12128): Elaborating entity "Sumador_1bit" for hierarchy "Execute:execute|SuperALU:alu|ALU:alu|Sumador_Completo:sumador|Sumador_1bit:forloop[0].sumador" File: D:/ArquiII/Proyecto#2/Sumador_Completo.sv Line: 14
+Info (12128): Elaborating entity "PixProm" for hierarchy "Execute:execute|SuperALU:alu|PixProm:pixprom" File: D:/ArquiII/Proyecto#2/SuperALU.sv Line: 12
+Warning (10230): Verilog HDL assignment warning at PixProm.sv(6): truncated value with size 32 to match size of target (8) File: D:/ArquiII/Proyecto#2/PixProm.sv Line: 6
+Info (12128): Elaborating entity "Umbral" for hierarchy "Execute:execute|SuperALU:alu|Umbral:umbral" File: D:/ArquiII/Proyecto#2/SuperALU.sv Line: 14
+Info (12128): Elaborating entity "Condition_Unit" for hierarchy "Execute:execute|Condition_Unit:condUnit" File: D:/ArquiII/Proyecto#2/Execute.sv Line: 32
+Info (12128): Elaborating entity "flopenr" for hierarchy "Execute:execute|Condition_Unit:condUnit|flopenr:flagreg1" File: D:/ArquiII/Proyecto#2/Condition_Unit.sv Line: 16
+Info (12128): Elaborating entity "condcheck" for hierarchy "Execute:execute|Condition_Unit:condUnit|condcheck:cc" File: D:/ArquiII/Proyecto#2/Condition_Unit.sv Line: 22
+Warning (10199): Verilog HDL Case Statement warning at Condition_Unit.sv(52): case item expression never matches the case expression File: D:/ArquiII/Proyecto#2/Condition_Unit.sv Line: 52
+Warning (10199): Verilog HDL Case Statement warning at Condition_Unit.sv(54): case item expression never matches the case expression File: D:/ArquiII/Proyecto#2/Condition_Unit.sv Line: 54
+Warning (10199): Verilog HDL Case Statement warning at Condition_Unit.sv(56): case item expression never matches the case expression File: D:/ArquiII/Proyecto#2/Condition_Unit.sv Line: 56
+Warning (10199): Verilog HDL Case Statement warning at Condition_Unit.sv(58): case item expression never matches the case expression File: D:/ArquiII/Proyecto#2/Condition_Unit.sv Line: 58
+Warning (10199): Verilog HDL Case Statement warning at Condition_Unit.sv(60): case item expression never matches the case expression File: D:/ArquiII/Proyecto#2/Condition_Unit.sv Line: 60
+Warning (10199): Verilog HDL Case Statement warning at Condition_Unit.sv(62): case item expression never matches the case expression File: D:/ArquiII/Proyecto#2/Condition_Unit.sv Line: 62
+Warning (10199): Verilog HDL Case Statement warning at Condition_Unit.sv(64): case item expression never matches the case expression File: D:/ArquiII/Proyecto#2/Condition_Unit.sv Line: 64
+Warning (10199): Verilog HDL Case Statement warning at Condition_Unit.sv(66): case item expression never matches the case expression File: D:/ArquiII/Proyecto#2/Condition_Unit.sv Line: 66
+Warning (10199): Verilog HDL Case Statement warning at Condition_Unit.sv(68): case item expression never matches the case expression File: D:/ArquiII/Proyecto#2/Condition_Unit.sv Line: 68
+Warning (10199): Verilog HDL Case Statement warning at Condition_Unit.sv(70): case item expression never matches the case expression File: D:/ArquiII/Proyecto#2/Condition_Unit.sv Line: 70
+Warning (10199): Verilog HDL Case Statement warning at Condition_Unit.sv(72): case item expression never matches the case expression File: D:/ArquiII/Proyecto#2/Condition_Unit.sv Line: 72
+Warning (10199): Verilog HDL Case Statement warning at Condition_Unit.sv(74): case item expression never matches the case expression File: D:/ArquiII/Proyecto#2/Condition_Unit.sv Line: 74
+Warning (10272): Verilog HDL Case Statement warning at Condition_Unit.sv(50): case item expression covers a value already covered by a previous case item File: D:/ArquiII/Proyecto#2/Condition_Unit.sv Line: 50
+Info (12128): Elaborating entity "RegEM" for hierarchy "Execute:execute|RegEM:regem" File: D:/ArquiII/Proyecto#2/Execute.sv Line: 40
+Info (12128): Elaborating entity "Memory" for hierarchy "Memory:memory" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 89
+Info (12128): Elaborating entity "RAM" for hierarchy "Memory:memory|RAM:memdatos" File: D:/ArquiII/Proyecto#2/Memory.sv Line: 19
+Info (12128): Elaborating entity "altsyncram" for hierarchy "Memory:memory|RAM:memdatos|altsyncram:altsyncram_component" File: D:/ArquiII/Proyecto#2/RAM.v Line: 99
+Info (12130): Elaborated megafunction instantiation "Memory:memory|RAM:memdatos|altsyncram:altsyncram_component" File: D:/ArquiII/Proyecto#2/RAM.v Line: 99
+Info (12133): Instantiated megafunction "Memory:memory|RAM:memdatos|altsyncram:altsyncram_component" with the following parameter: File: D:/ArquiII/Proyecto#2/RAM.v Line: 99
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "D:\ArquiII\Pixeles\RAM.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "65536"
+    Info (12134): Parameter "numwords_b" = "65536"
+    Info (12134): Parameter "operation_mode" = "BIDIR_DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "outdata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "16"
+    Info (12134): Parameter "widthad_b" = "16"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_c6m2.tdf
+    Info (12023): Found entity 1: altsyncram_c6m2 File: D:/ArquiII/Proyecto#2/db/altsyncram_c6m2.tdf Line: 33
+Info (12128): Elaborating entity "altsyncram_c6m2" for hierarchy "Memory:memory|RAM:memdatos|altsyncram:altsyncram_component|altsyncram_c6m2:auto_generated" File: d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_dla.tdf
+    Info (12023): Found entity 1: decode_dla File: D:/ArquiII/Proyecto#2/db/decode_dla.tdf Line: 22
+Info (12128): Elaborating entity "decode_dla" for hierarchy "Memory:memory|RAM:memdatos|altsyncram:altsyncram_component|altsyncram_c6m2:auto_generated|decode_dla:decode2" File: D:/ArquiII/Proyecto#2/db/altsyncram_c6m2.tdf Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_61a.tdf
+    Info (12023): Found entity 1: decode_61a File: D:/ArquiII/Proyecto#2/db/decode_61a.tdf Line: 22
+Info (12128): Elaborating entity "decode_61a" for hierarchy "Memory:memory|RAM:memdatos|altsyncram:altsyncram_component|altsyncram_c6m2:auto_generated|decode_61a:rden_decode_a" File: D:/ArquiII/Proyecto#2/db/altsyncram_c6m2.tdf Line: 53
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_ahb.tdf
+    Info (12023): Found entity 1: mux_ahb File: D:/ArquiII/Proyecto#2/db/mux_ahb.tdf Line: 22
+Info (12128): Elaborating entity "mux_ahb" for hierarchy "Memory:memory|RAM:memdatos|altsyncram:altsyncram_component|altsyncram_c6m2:auto_generated|mux_ahb:mux4" File: D:/ArquiII/Proyecto#2/db/altsyncram_c6m2.tdf Line: 55
+Info (12128): Elaborating entity "RegMW" for hierarchy "Memory:memory|RegMW:regmw" File: D:/ArquiII/Proyecto#2/Memory.sv Line: 31
+Info (12128): Elaborating entity "Hazard_Unit" for hierarchy "Hazard_Unit:hazard" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 101
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/ArquiII/Proyecto#2/db/SIMD_Proc.ram0_MemInst_e11cf049.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "InstrD[0]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[1]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[2]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[3]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[4]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[5]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[6]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[7]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[9]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[10]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[13]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[14]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[15]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[16]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[18]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[19]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[22]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[24]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "InstrD[25]" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 2
+    Warning (13410): Pin "Stuck" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 4
+    Warning (13410): Pin "vga_sync" is stuck at GND File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 4
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 58 registers lost all their fanouts during netlist optimizations.
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "clk" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 15
+Info (144001): Generated suppressed messages file D:/ArquiII/Proyecto#2/output_files/SIMD_Proc.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "go" File: D:/ArquiII/Proyecto#2/Pipeline_ARM.sv Line: 1
+Info (21057): Implemented 1164 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 184 output pins
+    Info (21061): Implemented 720 logic cells
+    Info (21064): Implemented 256 RAM segments
+    Info (21062): Implemented 1 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 66 warnings
+    Info: Peak virtual memory: 4868 megabytes
+    Info: Processing ended: Wed Jul 08 21:48:26 2020
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:34
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/ArquiII/Proyecto#2/output_files/SIMD_Proc.map.smsg.
+
+

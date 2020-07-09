@@ -1,0 +1,6 @@
+Info (10281): Verilog HDL Declaration information at PasoDatos.sv(10): object "ra1d" differs only in case from object "RA1D" in the same scope File: D:/ArquiII/Proyecto#2/PasoDatos.sv Line: 10
+Info (10281): Verilog HDL Declaration information at PasoDatos.sv(10): object "ra2d" differs only in case from object "RA2D" in the same scope File: D:/ArquiII/Proyecto#2/PasoDatos.sv Line: 10
+Warning (10273): Verilog HDL warning at Extend.sv(21): extended using "x" or "z" File: D:/ArquiII/Proyecto#2/Extend.sv Line: 21
+Info (10281): Verilog HDL Declaration information at Decode.sv(12): object "ra1d" differs only in case from object "RA1D" in the same scope File: D:/ArquiII/Proyecto#2/Decode.sv Line: 12
+Info (10281): Verilog HDL Declaration information at Decode.sv(12): object "ra2d" differs only in case from object "RA2D" in the same scope File: D:/ArquiII/Proyecto#2/Decode.sv Line: 12
+Warning (10273): Verilog HDL warning at Control_Unit.sv(78): extended using "x" or "z" File: D:/ArquiII/Proyecto#2/Control_Unit.sv Line: 78

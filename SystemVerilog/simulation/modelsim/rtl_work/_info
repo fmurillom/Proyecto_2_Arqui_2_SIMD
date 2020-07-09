@@ -1,0 +1,836 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/ArquiII/Proyecto#2/simulation/modelsim
+vALU
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1594266524
+!i10b 1
+!s100 A?o7VIU^:ekIiei55]IB13
+I;Xnf?o`W`Hai_HU75SzB:0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 ALU_sv_unit
+S1
+R0
+Z4 w1539384711
+8D:/ArquiII/Proyecto#2/ALU.sv
+FD:/ArquiII/Proyecto#2/ALU.sv
+L0 1
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1594266524.000000
+!s107 D:/ArquiII/Proyecto#2/ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/ALU.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+D:/ArquiII/Proyecto#2
+Z9 tCvgOpt 0
+n@a@l@u
+vBancoRegistros
+R1
+R2
+!i10b 1
+!s100 U@a[=md9jL`I:4^l]Z`iV0
+Ia]d:KTfzVI;TcdGzYeFji1
+R3
+!s105 BancoRegistros_sv_unit
+S1
+R0
+w1594094421
+8D:/ArquiII/Proyecto#2/BancoRegistros.sv
+FD:/ArquiII/Proyecto#2/BancoRegistros.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/ArquiII/Proyecto#2/BancoRegistros.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/BancoRegistros.sv|
+!i113 1
+R7
+R8
+R9
+n@banco@registros
+vcondcheck
+R1
+R2
+!i10b 1
+!s100 9DT<bB>[4V]>ScTX4fzS@3
+Ign<dOZK_GKa2Y]X81FjE33
+R3
+Z10 !s105 Condition_Unit_sv_unit
+S1
+R0
+Z11 w1594084648
+Z12 8D:/ArquiII/Proyecto#2/Condition_Unit.sv
+Z13 FD:/ArquiII/Proyecto#2/Condition_Unit.sv
+L0 35
+R5
+r1
+!s85 0
+31
+R6
+Z14 !s107 D:/ArquiII/Proyecto#2/Condition_Unit.sv|
+Z15 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/Condition_Unit.sv|
+!i113 1
+R7
+R8
+R9
+vCondition_Unit
+R1
+R2
+!i10b 1
+!s100 <Qi<[`UC`hNI@SzIBWXF42
+IRLIaoGVS`Z1JVkcbgnh:J2
+R3
+R10
+S1
+R0
+R11
+R12
+R13
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+R14
+R15
+!i113 1
+R7
+R8
+R9
+n@condition_@unit
+vContadorNeg
+R1
+R2
+!i10b 1
+!s100 ;DEQKfPRQ=@zFWG5j`<7<3
+I1F8DeXLFfnm];9PQ;8::X2
+R3
+!s105 ContadorNeg_sv_unit
+S1
+R0
+R4
+8D:/ArquiII/Proyecto#2/ContadorNeg.sv
+FD:/ArquiII/Proyecto#2/ContadorNeg.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/ArquiII/Proyecto#2/ContadorNeg.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/ContadorNeg.sv|
+!i113 1
+R7
+R8
+R9
+n@contador@neg
+vControl_Unit
+R1
+R2
+!i10b 1
+!s100 GId4YDHmo6a7EzL67Km4_0
+I1:Ak`fGSTF?1[EF9b@j0Y0
+R3
+!s105 Control_Unit_sv_unit
+S1
+R0
+w1594092614
+8D:/ArquiII/Proyecto#2/Control_Unit.sv
+FD:/ArquiII/Proyecto#2/Control_Unit.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/ArquiII/Proyecto#2/Control_Unit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/Control_Unit.sv|
+!i113 1
+R7
+R8
+R9
+n@control_@unit
+vDecode
+R1
+R2
+!i10b 1
+!s100 0cFEfJgBRVFl8eDVOGGM<2
+IJljW6ziPOLjd1XGRPcJ`91
+R3
+!s105 Decode_sv_unit
+S1
+R0
+w1594262910
+8D:/ArquiII/Proyecto#2/Decode.sv
+FD:/ArquiII/Proyecto#2/Decode.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/ArquiII/Proyecto#2/Decode.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/Decode.sv|
+!i113 1
+R7
+R8
+R9
+n@decode
+vExecute
+R1
+R2
+!i10b 1
+!s100 D9_7lf7B1zM92?CML62e13
+IMK6cEQfYb8RT2eS>izgPV2
+R3
+!s105 Execute_sv_unit
+S1
+R0
+w1594094041
+8D:/ArquiII/Proyecto#2/Execute.sv
+FD:/ArquiII/Proyecto#2/Execute.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/ArquiII/Proyecto#2/Execute.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/Execute.sv|
+!i113 1
+R7
+R8
+R9
+n@execute
+vExtend
+R1
+R2
+!i10b 1
+!s100 0Gg]=WJm=N5GcL6a<6HLl3
+I^Sk:EiBETgVPVo2YDJTjh0
+R3
+!s105 Extend_sv_unit
+S1
+R0
+w1594091609
+8D:/ArquiII/Proyecto#2/Extend.sv
+FD:/ArquiII/Proyecto#2/Extend.sv
+L0 2
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/ArquiII/Proyecto#2/Extend.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/Extend.sv|
+!i113 1
+R7
+R8
+R9
+n@extend
+vFetch
+R1
+Z16 !s110 1594266523
+!i10b 1
+!s100 ;h30YPmfS35G0>T^Zf?=73
+I4Y339TT9C6E_8DFbE0eEP2
+R3
+!s105 Fetch_sv_unit
+S1
+R0
+w1594266485
+8D:/ArquiII/Proyecto#2/Fetch.sv
+FD:/ArquiII/Proyecto#2/Fetch.sv
+L0 1
+R5
+r1
+!s85 0
+31
+Z17 !s108 1594266523.000000
+!s107 D:/ArquiII/Proyecto#2/Fetch.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/Fetch.sv|
+!i113 1
+R7
+R8
+R9
+n@fetch
+vFlipFlop_SR
+R1
+R16
+!i10b 1
+!s100 ^Qc6jh=<__kTekHBO0M3z2
+Il8gDGm?N5TPlm0L2:7M9z1
+R3
+!s105 FlipFlop_SR_sv_unit
+S1
+R0
+R4
+8D:/ArquiII/Proyecto#2/FlipFlop_SR.sv
+FD:/ArquiII/Proyecto#2/FlipFlop_SR.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R17
+!s107 D:/ArquiII/Proyecto#2/FlipFlop_SR.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/FlipFlop_SR.sv|
+!i113 1
+R7
+R8
+R9
+n@flip@flop_@s@r
+vflopenr
+R1
+R16
+!i10b 1
+!s100 [;I?a3n1W=dAhB^Mod_]j2
+I8XK0e><T9A4P0e<58Vagn1
+R3
+!s105 flopenr_sv_unit
+S1
+R0
+R4
+8D:/ArquiII/Proyecto#2/flopenr.sv
+FD:/ArquiII/Proyecto#2/flopenr.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R17
+!s107 D:/ArquiII/Proyecto#2/flopenr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/flopenr.sv|
+!i113 1
+R7
+R8
+R9
+vHazard_Unit
+R1
+R16
+!i10b 1
+!s100 U<ezbR9=CUGB5FXd3flFc3
+I]`RSoXR:>@2_19Y[hcFFO2
+R3
+!s105 Hazard_Unit_sv_unit
+S1
+R0
+w1594265443
+8D:/ArquiII/Proyecto#2/Hazard_Unit.sv
+FD:/ArquiII/Proyecto#2/Hazard_Unit.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R17
+!s107 D:/ArquiII/Proyecto#2/Hazard_Unit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/Hazard_Unit.sv|
+!i113 1
+R7
+R8
+R9
+n@hazard_@unit
+vMemInst
+R1
+R2
+!i10b 1
+!s100 N4FU_fUOCD:QGdU<:1cVb2
+I1=JfN8zBYV^?ATPmC29G=1
+R3
+!s105 MemInst_sv_unit
+S1
+R0
+w1594090125
+8D:/ArquiII/Proyecto#2/MemInst.sv
+FD:/ArquiII/Proyecto#2/MemInst.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/ArquiII/Proyecto#2/MemInst.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/MemInst.sv|
+!i113 1
+R7
+R8
+R9
+n@mem@inst
+vMemory
+R1
+R16
+!i10b 1
+!s100 8QB4hiMakH@AffXH<RIQ;3
+IXoYTNcA5_F8075OEn8ZA83
+R3
+!s105 Memory_sv_unit
+S1
+R0
+w1594169105
+8D:/ArquiII/Proyecto#2/Memory.sv
+FD:/ArquiII/Proyecto#2/Memory.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R17
+!s107 D:/ArquiII/Proyecto#2/Memory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/Memory.sv|
+!i113 1
+R7
+R8
+R9
+n@memory
+vMux2
+R1
+R16
+!i10b 1
+!s100 ?L8gORO7PNSLCncL1O9nO3
+Ij0J^EMccKeOLF<mnzJ?=e3
+R3
+!s105 Mux2_sv_unit
+S1
+R0
+R4
+8D:/ArquiII/Proyecto#2/Mux2.sv
+FD:/ArquiII/Proyecto#2/Mux2.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R17
+!s107 D:/ArquiII/Proyecto#2/Mux2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/Mux2.sv|
+!i113 1
+R7
+R8
+R9
+n@mux2
+vMux3
+R1
+R16
+!i10b 1
+!s100 m1QBW`AVLM4b1G1=@Pcfh0
+IHPM:EZ^34[a7W[;ZK26:E3
+R3
+!s105 Mux3_sv_unit
+S1
+R0
+R4
+8D:/ArquiII/Proyecto#2/Mux3.sv
+FD:/ArquiII/Proyecto#2/Mux3.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R17
+!s107 D:/ArquiII/Proyecto#2/Mux3.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/Mux3.sv|
+!i113 1
+R7
+R8
+R9
+n@mux3
+vPCreg
+R1
+R16
+!i10b 1
+!s100 k^RkTHf]H1T0g>O01oMB[1
+IlLbeUITPiYhLO^LXWoA2P3
+R3
+!s105 PCreg_sv_unit
+S1
+R0
+R4
+8D:/ArquiII/Proyecto#2/PCreg.sv
+FD:/ArquiII/Proyecto#2/PCreg.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R17
+!s107 D:/ArquiII/Proyecto#2/PCreg.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/PCreg.sv|
+!i113 1
+R7
+R8
+R9
+n@p@creg
+vPipeline_ARM
+R1
+R16
+!i10b 1
+!s100 [@imdQeL;BUc<7iN3=gYX0
+I=o]R_5HV@9?M_6EXB8XHQ2
+R3
+!s105 Pipeline_ARM_sv_unit
+S1
+R0
+w1594170586
+8D:/ArquiII/Proyecto#2/Pipeline_ARM.sv
+FD:/ArquiII/Proyecto#2/Pipeline_ARM.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R17
+!s107 D:/ArquiII/Proyecto#2/Pipeline_ARM.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/Pipeline_ARM.sv|
+!i113 1
+R7
+R8
+R9
+n@pipeline_@a@r@m
+vPixProm
+R1
+Z18 !s110 1594266522
+!i10b 1
+!s100 J>K2Mn0NUQi`]PWzc5iV73
+I]5;eIzTzXiI76JWnIEDok3
+R3
+!s105 PixProm_sv_unit
+S1
+R0
+R4
+8D:/ArquiII/Proyecto#2/PixProm.sv
+FD:/ArquiII/Proyecto#2/PixProm.sv
+L0 1
+R5
+r1
+!s85 0
+31
+Z19 !s108 1594266522.000000
+!s107 D:/ArquiII/Proyecto#2/PixProm.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/PixProm.sv|
+!i113 1
+R7
+R8
+R9
+n@pix@prom
+vRAM
+Z20 !s110 1594266521
+!i10b 1
+!s100 OB2g>VFHgX8f2hmU7zzh00
+Il`anB^E[jczFjJoHdTKkZ1
+R3
+R0
+w1594015115
+8D:/ArquiII/Proyecto#2/RAM.v
+FD:/ArquiII/Proyecto#2/RAM.v
+L0 39
+R5
+r1
+!s85 0
+31
+Z21 !s108 1594266521.000000
+!s107 D:/ArquiII/Proyecto#2/RAM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/RAM.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+D:/ArquiII/Proyecto#2
+R9
+n@r@a@m
+vRegDE
+R1
+R18
+!i10b 1
+!s100 ^U]4l5SYkR`o^G9Un3:8J1
+Ii@_B7z?ibRH@EUN2bjaL13
+R3
+!s105 RegDE_sv_unit
+S1
+R0
+w1594091717
+8D:/ArquiII/Proyecto#2/RegDE.sv
+FD:/ArquiII/Proyecto#2/RegDE.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R19
+!s107 D:/ArquiII/Proyecto#2/RegDE.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/RegDE.sv|
+!i113 1
+R7
+R8
+R9
+n@reg@d@e
+vRegEM
+R1
+R18
+!i10b 1
+!s100 D729cM?3FCYjD08P25InW1
+Ie0ZHk3o78=;LgCCMKejj83
+R3
+!s105 RegEM_sv_unit
+S1
+R0
+w1594093617
+8D:/ArquiII/Proyecto#2/RegEM.sv
+FD:/ArquiII/Proyecto#2/RegEM.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R19
+!s107 D:/ArquiII/Proyecto#2/RegEM.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/RegEM.sv|
+!i113 1
+R7
+R8
+R9
+n@reg@e@m
+vRegFD
+R1
+R18
+!i10b 1
+!s100 gVn`z2nEnU>TQhiU:A5<01
+IXEWY4MdiSi3PX<U94EE4j2
+R3
+!s105 RegFD_sv_unit
+S1
+R0
+w1594090269
+8D:/ArquiII/Proyecto#2/RegFD.sv
+FD:/ArquiII/Proyecto#2/RegFD.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R19
+!s107 D:/ArquiII/Proyecto#2/RegFD.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/RegFD.sv|
+!i113 1
+R7
+R8
+R9
+n@reg@f@d
+vRegMW
+R1
+R18
+!i10b 1
+!s100 5nD>K1<7UTg`zn`YE6zCn1
+I9:`iP7V1dCJlNnoc21SYI1
+R3
+!s105 RegMW_sv_unit
+S1
+R0
+w1594093663
+8D:/ArquiII/Proyecto#2/RegMW.sv
+FD:/ArquiII/Proyecto#2/RegMW.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R19
+!s107 D:/ArquiII/Proyecto#2/RegMW.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/RegMW.sv|
+!i113 1
+R7
+R8
+R9
+n@reg@m@w
+vStopCounter
+R1
+R18
+!i10b 1
+!s100 :`hX6fI`[M?`H@egIUcDR2
+I3:@azfX8l9UacS7kScBfC2
+R3
+!s105 StopCounter_sv_unit
+S1
+R0
+R4
+8D:/ArquiII/Proyecto#2/StopCounter.sv
+FD:/ArquiII/Proyecto#2/StopCounter.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R19
+!s107 D:/ArquiII/Proyecto#2/StopCounter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/StopCounter.sv|
+!i113 1
+R7
+R8
+R9
+n@stop@counter
+vSumador_1bit
+R1
+R18
+!i10b 1
+!s100 Kn^Cm6RJkX3^Vb5ThnFBh0
+I2lUN9=hG13GA8@AVge0^U2
+R3
+!s105 Sumador_1bit_sv_unit
+S1
+R0
+R4
+8D:/ArquiII/Proyecto#2/Sumador_1bit.sv
+FD:/ArquiII/Proyecto#2/Sumador_1bit.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R19
+!s107 D:/ArquiII/Proyecto#2/Sumador_1bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/Sumador_1bit.sv|
+!i113 1
+R7
+R8
+R9
+n@sumador_1bit
+vSumador_Completo
+R1
+R18
+!i10b 1
+!s100 65=9=k:;Y_OleVW3;_EC[1
+IM[;E2R=BYW>e<9[3[O0Um2
+R3
+!s105 Sumador_Completo_sv_unit
+S1
+R0
+R4
+8D:/ArquiII/Proyecto#2/Sumador_Completo.sv
+FD:/ArquiII/Proyecto#2/Sumador_Completo.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R19
+!s107 D:/ArquiII/Proyecto#2/Sumador_Completo.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/Sumador_Completo.sv|
+!i113 1
+R7
+R8
+R9
+n@sumador_@completo
+vSuperALU
+R1
+R18
+!i10b 1
+!s100 367A<Ng>bnUZ6AHRbSO:S1
+I_^2`1=<P?lXjz]XE509VJ2
+R3
+!s105 SuperALU_sv_unit
+S1
+R0
+R4
+8D:/ArquiII/Proyecto#2/SuperALU.sv
+FD:/ArquiII/Proyecto#2/SuperALU.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R19
+!s107 D:/ArquiII/Proyecto#2/SuperALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/SuperALU.sv|
+!i113 1
+R7
+R8
+R9
+n@super@a@l@u
+vtestbench_Pipeline
+R1
+!s110 1594266552
+!i10b 1
+!s100 CVe5U?MomFOK60kmVm^Zb3
+InK2kc6QK8=D6kn3_=UM1a2
+R3
+!s105 testbench_Pipeline_sv_unit
+S1
+R0
+w1594093953
+8D:/ArquiII/Proyecto#2/testbench_Pipeline.sv
+FD:/ArquiII/Proyecto#2/testbench_Pipeline.sv
+L0 3
+R5
+r1
+!s85 0
+31
+!s108 1594266552.000000
+!s107 D:/ArquiII/Proyecto#2/testbench_Pipeline.sv|
+!s90 -reportprogress|300|-work|work|D:/ArquiII/Proyecto#2/testbench_Pipeline.sv|
+!i113 1
+o-work work
+R9
+ntestbench_@pipeline
+vUmbral
+R1
+R18
+!i10b 1
+!s100 eTTB2h1W@5U[loD=DGbfV0
+I`CgWh3gVi^1YKj3RcKCK31
+R3
+!s105 Umbral_sv_unit
+S1
+R0
+R4
+8D:/ArquiII/Proyecto#2/Umbral.sv
+FD:/ArquiII/Proyecto#2/Umbral.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R21
+!s107 D:/ArquiII/Proyecto#2/Umbral.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/Umbral.sv|
+!i113 1
+R7
+R8
+R9
+n@umbral
+vVGAController
+R1
+R20
+!i10b 1
+!s100 O4O@C^Je^_`A`j<EN0?AK3
+I4`?;9TP^E0[?UZzTK3<dQ1
+R3
+!s105 VGAController_sv_unit
+S1
+R0
+R4
+8D:/ArquiII/Proyecto#2/VGAController.sv
+FD:/ArquiII/Proyecto#2/VGAController.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R21
+!s107 D:/ArquiII/Proyecto#2/VGAController.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ArquiII/Proyecto#2|D:/ArquiII/Proyecto#2/VGAController.sv|
+!i113 1
+R7
+R8
+R9
+n@v@g@a@controller
