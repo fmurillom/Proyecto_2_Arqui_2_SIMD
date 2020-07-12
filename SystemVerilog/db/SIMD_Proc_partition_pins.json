@@ -4,6 +4,18 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "InstrD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrD[2]",
+					"strict" : false
+				},
+				{
 					"name" : "InstrD[8]",
 					"strict" : false
 				},
@@ -16,7 +28,27 @@
 					"strict" : false
 				},
 				{
+					"name" : "InstrD[13]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrD[14]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrD[15]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrD[16]",
+					"strict" : false
+				},
+				{
 					"name" : "InstrD[17]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrD[19]",
 					"strict" : false
 				},
 				{
@@ -28,7 +60,75 @@
 					"strict" : false
 				},
 				{
+					"name" : "InstrD[22]",
+					"strict" : false
+				},
+				{
 					"name" : "InstrD[23]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrDV[0]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrDV[1]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrDV[2]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrDV[8]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrDV[11]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrDV[12]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrDV[13]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrDV[14]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrDV[15]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrDV[16]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrDV[17]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrDV[19]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrDV[20]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrDV[21]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrDV[22]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrDV[23]",
 					"strict" : false
 				},
 				{

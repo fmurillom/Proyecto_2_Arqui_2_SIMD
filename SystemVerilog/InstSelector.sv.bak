@@ -1,0 +1,23 @@
+module InstSelector(input logic InstSelec,
+							input logic[25:0] Inst,
+							output logic[25:0] InstOut,
+							output logic[25:0] InstOutV);
+							
+always_comb
+
+	case(ImmSrc)
+	
+	1'b0: InstOut = Inst;
+			InstOutV = 25'bx;
+
+
+	// 12-bit unsigned immediate
+	1'b1: InstOut = 25'bx;
+			InstOutV = Inst;
+	
+	default: InstOut = 25'bx;
+				InstOutV = 25'bx;// undefined
+
+	endcase
+
+endmodule

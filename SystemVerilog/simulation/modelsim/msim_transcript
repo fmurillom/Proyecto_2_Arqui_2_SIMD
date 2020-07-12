@@ -10,321 +10,482 @@
 # Copying D:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/RAM.v}
+# vlog -vlog01compat -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RAM.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:41 on Jul 08,2020
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/RAM.v 
+# Start time: 23:03:22 on Jul 11,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RAM.v 
 # -- Compiling module RAM
 # 
 # Top level modules:
 # 	RAM
-# End time: 21:48:41 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:22 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/VGAController.sv}
+# vlog -vlog01compat -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RamV.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:41 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/VGAController.sv 
+# Start time: 23:03:22 on Jul 11,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RamV.v 
+# -- Compiling module RamV
+# 
+# Top level modules:
+# 	RamV
+# End time: 23:03:22 on Jul 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/mux_4to1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:22 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/mux_4to1.sv 
+# -- Compiling module mux_4to1
+# 
+# Top level modules:
+# 	mux_4to1
+# End time: 23:03:22 on Jul 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/mux_2to1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:22 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/mux_2to1.sv 
+# -- Compiling module mux_2to1
+# 
+# Top level modules:
+# 	mux_2to1
+# End time: 23:03:22 on Jul 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RegMWV.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:22 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RegMWV.sv 
+# -- Compiling module RegMWV
+# 
+# Top level modules:
+# 	RegMWV
+# End time: 23:03:22 on Jul 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RegEMV.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:22 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RegEMV.sv 
+# -- Compiling module RegEMV
+# 
+# Top level modules:
+# 	RegEMV
+# End time: 23:03:22 on Jul 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RegDEV.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:22 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RegDEV.sv 
+# -- Compiling module RegDEV
+# 
+# Top level modules:
+# 	RegDEV
+# End time: 23:03:22 on Jul 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/MemoryV.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:22 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/MemoryV.sv 
+# -- Compiling module MemoryV
+# 
+# Top level modules:
+# 	MemoryV
+# End time: 23:03:23 on Jul 11,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/ExtendV.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:23 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/ExtendV.sv 
+# -- Compiling module ExtendV
+# 
+# Top level modules:
+# 	ExtendV
+# End time: 23:03:23 on Jul 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/ExecuteV.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:23 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/ExecuteV.sv 
+# -- Compiling module ExecuteV
+# 
+# Top level modules:
+# 	ExecuteV
+# End time: 23:03:23 on Jul 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/DecodeV.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:23 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/DecodeV.sv 
+# -- Compiling module DecodeV
+# 
+# Top level modules:
+# 	DecodeV
+# End time: 23:03:23 on Jul 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Control_UnitV.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:23 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Control_UnitV.sv 
+# -- Compiling module Control_UnitV
+# 
+# Top level modules:
+# 	Control_UnitV
+# End time: 23:03:23 on Jul 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Condition_UnitV.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:23 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Condition_UnitV.sv 
+# -- Compiling module Condition_UnitV
+# -- Compiling module condcheckV
+# 
+# Top level modules:
+# 	Condition_UnitV
+# End time: 23:03:23 on Jul 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/BancoRegistrosV.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:23 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/BancoRegistrosV.sv 
+# -- Compiling module BancoRegistrosV
+# 
+# Top level modules:
+# 	BancoRegistrosV
+# End time: 23:03:23 on Jul 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/ALU_Vec.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:23 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/ALU_Vec.sv 
+# -- Compiling module ALU_Vec
+# 
+# Top level modules:
+# 	ALU_Vec
+# End time: 23:03:23 on Jul 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/ALU_NBITS.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:23 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/ALU_NBITS.sv 
+# -- Compiling module ALU_NBITS
+# 
+# Top level modules:
+# 	ALU_NBITS
+# End time: 23:03:24 on Jul 11,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/VGAController.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:24 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/VGAController.sv 
 # -- Compiling module VGAController
 # 
 # Top level modules:
 # 	VGAController
-# End time: 21:48:41 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:24 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/Umbral.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Umbral.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:41 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/Umbral.sv 
+# Start time: 23:03:24 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Umbral.sv 
 # -- Compiling module Umbral
 # 
 # Top level modules:
 # 	Umbral
-# End time: 21:48:42 on Jul 08,2020, Elapsed time: 0:00:01
+# End time: 23:03:24 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/SuperALU.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/SuperALU.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:42 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/SuperALU.sv 
+# Start time: 23:03:24 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/SuperALU.sv 
 # -- Compiling module SuperALU
 # 
 # Top level modules:
 # 	SuperALU
-# End time: 21:48:42 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:24 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/Sumador_Completo.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Sumador_Completo.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:42 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/Sumador_Completo.sv 
+# Start time: 23:03:24 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Sumador_Completo.sv 
 # -- Compiling module Sumador_Completo
 # 
 # Top level modules:
 # 	Sumador_Completo
-# End time: 21:48:42 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:24 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/Sumador_1bit.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Sumador_1bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:42 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/Sumador_1bit.sv 
+# Start time: 23:03:24 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Sumador_1bit.sv 
 # -- Compiling module Sumador_1bit
 # 
 # Top level modules:
 # 	Sumador_1bit
-# End time: 21:48:42 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:24 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/StopCounter.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/StopCounter.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:42 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/StopCounter.sv 
+# Start time: 23:03:24 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/StopCounter.sv 
 # -- Compiling module StopCounter
 # 
 # Top level modules:
 # 	StopCounter
-# End time: 21:48:42 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:24 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/RegMW.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RegMW.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:42 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/RegMW.sv 
+# Start time: 23:03:24 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RegMW.sv 
 # -- Compiling module RegMW
 # 
 # Top level modules:
 # 	RegMW
-# End time: 21:48:42 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:24 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/RegFD.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RegFD.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:42 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/RegFD.sv 
+# Start time: 23:03:24 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RegFD.sv 
 # -- Compiling module RegFD
 # 
 # Top level modules:
 # 	RegFD
-# End time: 21:48:42 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:25 on Jul 11,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/RegEM.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RegEM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:42 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/RegEM.sv 
+# Start time: 23:03:25 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RegEM.sv 
 # -- Compiling module RegEM
 # 
 # Top level modules:
 # 	RegEM
-# End time: 21:48:42 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:25 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/RegDE.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RegDE.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:42 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/RegDE.sv 
+# Start time: 23:03:25 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/RegDE.sv 
 # -- Compiling module RegDE
 # 
 # Top level modules:
 # 	RegDE
-# End time: 21:48:42 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:25 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/PixProm.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/PixProm.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:42 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/PixProm.sv 
+# Start time: 23:03:25 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/PixProm.sv 
 # -- Compiling module PixProm
 # 
 # Top level modules:
 # 	PixProm
-# End time: 21:48:43 on Jul 08,2020, Elapsed time: 0:00:01
+# End time: 23:03:25 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/Pipeline_ARM.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Pipeline_ARM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:43 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/Pipeline_ARM.sv 
+# Start time: 23:03:25 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Pipeline_ARM.sv 
 # -- Compiling module Pipeline_ARM
 # 
 # Top level modules:
 # 	Pipeline_ARM
-# End time: 21:48:43 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:25 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/PCreg.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/PCreg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:43 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/PCreg.sv 
+# Start time: 23:03:25 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/PCreg.sv 
 # -- Compiling module PCreg
 # 
 # Top level modules:
 # 	PCreg
-# End time: 21:48:43 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:25 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/Mux3.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Mux3.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:43 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/Mux3.sv 
+# Start time: 23:03:25 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Mux3.sv 
 # -- Compiling module Mux3
 # 
 # Top level modules:
 # 	Mux3
-# End time: 21:48:43 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:25 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/Mux2.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Mux2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:43 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/Mux2.sv 
+# Start time: 23:03:25 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Mux2.sv 
 # -- Compiling module Mux2
 # 
 # Top level modules:
 # 	Mux2
-# End time: 21:48:43 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:25 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/Memory.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Memory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:43 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/Memory.sv 
+# Start time: 23:03:25 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Memory.sv 
 # -- Compiling module Memory
 # 
 # Top level modules:
 # 	Memory
-# End time: 21:48:43 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:25 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/Hazard_Unit.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Hazard_Unit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:43 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/Hazard_Unit.sv 
+# Start time: 23:03:26 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Hazard_Unit.sv 
 # -- Compiling module Hazard_Unit
 # 
 # Top level modules:
 # 	Hazard_Unit
-# End time: 21:48:43 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:26 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/flopenr.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/flopenr.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:43 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/flopenr.sv 
+# Start time: 23:03:26 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/flopenr.sv 
 # -- Compiling module flopenr
 # 
 # Top level modules:
 # 	flopenr
-# End time: 21:48:43 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:26 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/FlipFlop_SR.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/FlipFlop_SR.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:43 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/FlipFlop_SR.sv 
+# Start time: 23:03:26 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/FlipFlop_SR.sv 
 # -- Compiling module FlipFlop_SR
 # 
 # Top level modules:
 # 	FlipFlop_SR
-# End time: 21:48:43 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:26 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/Fetch.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Fetch.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:43 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/Fetch.sv 
+# Start time: 23:03:26 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Fetch.sv 
 # -- Compiling module Fetch
 # 
 # Top level modules:
 # 	Fetch
-# End time: 21:48:44 on Jul 08,2020, Elapsed time: 0:00:01
+# End time: 23:03:26 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/Extend.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Extend.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:44 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/Extend.sv 
+# Start time: 23:03:26 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Extend.sv 
 # -- Compiling module Extend
 # 
 # Top level modules:
 # 	Extend
-# End time: 21:48:44 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:26 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/Execute.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Execute.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:44 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/Execute.sv 
+# Start time: 23:03:26 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Execute.sv 
 # -- Compiling module Execute
 # 
 # Top level modules:
 # 	Execute
-# End time: 21:48:44 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:26 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/Decode.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Decode.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:44 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/Decode.sv 
+# Start time: 23:03:26 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Decode.sv 
 # -- Compiling module Decode
 # 
 # Top level modules:
 # 	Decode
-# End time: 21:48:44 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:26 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/Control_Unit.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Control_Unit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:44 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/Control_Unit.sv 
+# Start time: 23:03:26 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Control_Unit.sv 
 # -- Compiling module Control_Unit
 # 
 # Top level modules:
 # 	Control_Unit
-# End time: 21:48:44 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:26 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/ContadorNeg.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/ContadorNeg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:44 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/ContadorNeg.sv 
+# Start time: 23:03:26 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/ContadorNeg.sv 
 # -- Compiling module ContadorNeg
 # 
 # Top level modules:
 # 	ContadorNeg
-# End time: 21:48:44 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:27 on Jul 11,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/Condition_Unit.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Condition_Unit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:44 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/Condition_Unit.sv 
+# Start time: 23:03:27 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Condition_Unit.sv 
 # -- Compiling module Condition_Unit
 # -- Compiling module condcheck
 # 
 # Top level modules:
 # 	Condition_Unit
-# End time: 21:48:44 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:27 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/BancoRegistros.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/BancoRegistros.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:44 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/BancoRegistros.sv 
+# Start time: 23:03:27 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/BancoRegistros.sv 
 # -- Compiling module BancoRegistros
 # 
 # Top level modules:
 # 	BancoRegistros
-# End time: 21:48:44 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:27 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/ALU.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/ALU.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:44 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/ALU.sv 
+# Start time: 23:03:27 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/ALU.sv 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 21:48:44 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:27 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ArquiII/Proyecto#2 {D:/ArquiII/Proyecto#2/MemInst.sv}
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/InstSelector.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:48:44 on Jul 08,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/Proyecto#2" D:/ArquiII/Proyecto#2/MemInst.sv 
+# Start time: 23:03:27 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/InstSelector.sv 
+# -- Compiling module InstSelector
+# 
+# Top level modules:
+# 	InstSelector
+# End time: 23:03:27 on Jul 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog {D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/MemInst.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:27 on Jul 11,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog" D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/MemInst.sv 
 # -- Compiling module MemInst
 # 
 # Top level modules:
 # 	MemInst
-# End time: 21:48:45 on Jul 08,2020, Elapsed time: 0:00:01
+# End time: 23:03:27 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vlog -reportprogress 300 -work work D:/ArquiII/Proyecto#2/testbench_Pipeline.sv
+vlog -reportprogress 300 -work work D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/testbench_Pipeline.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:49:12 on Jul 08,2020
-# vlog -reportprogress 300 -work work D:/ArquiII/Proyecto#2/testbench_Pipeline.sv 
+# Start time: 23:03:59 on Jul 11,2020
+# vlog -reportprogress 300 -work work D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/testbench_Pipeline.sv 
 # -- Compiling module testbench_Pipeline
 # 
 # Top level modules:
 # 	testbench_Pipeline
-# End time: 21:49:12 on Jul 08,2020, Elapsed time: 0:00:00
+# End time: 23:03:59 on Jul 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim -gui -l msim_transcript work.testbench_Pipeline -L altera_mf_ver
 # vsim -gui -l msim_transcript work.testbench_Pipeline -L altera_mf_ver 
-# Start time: 21:49:35 on Jul 08,2020
+# Start time: 23:04:20 on Jul 11,2020
 # Loading sv_std.std
 # Loading work.testbench_Pipeline
 # Loading work.Pipeline_ARM
@@ -336,12 +497,18 @@ vsim -gui -l msim_transcript work.testbench_Pipeline -L altera_mf_ver
 # Loading work.PCreg
 # Loading work.Mux2
 # Loading work.MemInst
+# Loading work.InstSelector
 # Loading work.RegFD
 # Loading work.Decode
 # Loading work.Control_Unit
 # Loading work.BancoRegistros
 # Loading work.Extend
 # Loading work.RegDE
+# Loading work.DecodeV
+# Loading work.Control_UnitV
+# Loading work.BancoRegistrosV
+# Loading work.ExtendV
+# Loading work.RegDEV
 # Loading work.Execute
 # Loading work.Mux3
 # Loading work.SuperALU
@@ -353,27 +520,30 @@ vsim -gui -l msim_transcript work.testbench_Pipeline -L altera_mf_ver
 # Loading work.flopenr
 # Loading work.condcheck
 # Loading work.RegEM
+# Loading work.ExecuteV
+# Loading work.ALU_Vec
+# Loading work.ALU_NBITS
+# Loading work.mux_4to1
+# Loading work.mux_2to1
+# Loading work.Condition_UnitV
+# Loading work.condcheckV
+# Loading work.RegEMV
 # Loading work.Memory
 # Loading work.RAM
 # Loading altera_mf_ver.altsyncram
 # Loading work.RegMW
+# Loading work.MemoryV
+# Loading work.RamV
+# Loading work.RegMWV
 # Loading work.Hazard_Unit
 # Loading work.Sumador_1bit
 # Loading altera_mf_ver.altsyncram_body
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-restart -f
+# ** Warning: (vsim-3015) D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Pipeline_ARM.sv(127): [PCDPC] - Port size (16) does not match connection size (1) for port 'VGAArd'. The port definition is at: D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/MemoryV.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Pipeline/dut/memoryv File: D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/MemoryV.sv
+# ** Warning: (vsim-3015) D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/Pipeline_ARM.sv(127): [PCDPC] - Port size (256) does not match connection size (32) for port 'VGAData'. The port definition is at: D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/MemoryV.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Pipeline/dut/memoryv File: D:/ArquiII/GitVersion/Proyecto_2_Arqui_2_SIMD/SystemVerilog/MemoryV.sv
 add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[7]
 add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[6]
 add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[5]
@@ -382,861 +552,35 @@ add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[3]
 add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[2]
 add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[1]
 add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[0]
+add wave -position end  sim:/testbench_Pipeline/dut/decodeV/BR/rf[7]
+add wave -position end  sim:/testbench_Pipeline/dut/decodeV/BR/rf[6]
+add wave -position end  sim:/testbench_Pipeline/dut/decodeV/BR/rf[5]
+add wave -position end  sim:/testbench_Pipeline/dut/decodeV/BR/rf[4]
+add wave -position end  sim:/testbench_Pipeline/dut/decodeV/BR/rf[3]
+add wave -position end  sim:/testbench_Pipeline/dut/decodeV/BR/rf[2]
+add wave -position end  sim:/testbench_Pipeline/dut/decodeV/BR/rf[1]
+add wave -position end  sim:/testbench_Pipeline/dut/decodeV/BR/rf[0]
 run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# Break key hit
-quit -sim
-# End time: 21:51:17 on Jul 08,2020, Elapsed time: 0:01:42
-# Errors: 0, Warnings: 0
-vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline
-# vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline 
-# Start time: 21:51:35 on Jul 08,2020
-# Loading sv_std.std
-# Loading work.testbench_Pipeline
-# Loading work.Pipeline_ARM
-# Loading work.StopCounter
-# Loading work.VGAController
-# Loading work.ContadorNeg
-# Loading work.FlipFlop_SR
-# Loading work.Fetch
-# Loading work.PCreg
-# Loading work.Mux2
-# Loading work.MemInst
-# Loading work.RegFD
-# Loading work.Decode
-# Loading work.Control_Unit
-# Loading work.BancoRegistros
-# Loading work.Extend
-# Loading work.RegDE
-# Loading work.Execute
-# Loading work.Mux3
-# Loading work.SuperALU
-# Loading work.ALU
-# Loading work.Sumador_Completo
-# Loading work.PixProm
-# Loading work.Umbral
-# Loading work.Condition_Unit
-# Loading work.flopenr
-# Loading work.condcheck
-# Loading work.RegEM
-# Loading work.Memory
-# Loading work.RAM
-# Loading altera_mf_ver.altsyncram
-# Loading work.RegMW
-# Loading work.Hazard_Unit
-# Loading work.Sumador_1bit
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[7]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[6]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[5]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[4]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[3]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[2]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[1]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[0]
+# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=xxxxxxxxxxxxxxxxxxxxxxxxxx
+# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=xxxxxxxxxxxxxxxxxxxxxxxxxx
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=00101100100001100100000000
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=00101100100001100100000000
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=00101100100001100100000000
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=00000010011100000000000111
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=00010100000001000000000101
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=00101100000001000000000000
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=00101100100010000000000000
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=00101100100010000000000000
 run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-quit -sim
-# End time: 21:53:18 on Jul 08,2020, Elapsed time: 0:01:43
-# Errors: 0, Warnings: 0
-vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline
-# vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline 
-# Start time: 21:56:19 on Jul 08,2020
-# Loading sv_std.std
-# Loading work.testbench_Pipeline
-# Loading work.Pipeline_ARM
-# Loading work.StopCounter
-# Loading work.VGAController
-# Loading work.ContadorNeg
-# Loading work.FlipFlop_SR
-# Loading work.Fetch
-# Loading work.PCreg
-# Loading work.Mux2
-# Loading work.MemInst
-# Loading work.RegFD
-# Loading work.Decode
-# Loading work.Control_Unit
-# Loading work.BancoRegistros
-# Loading work.Extend
-# Loading work.RegDE
-# Loading work.Execute
-# Loading work.Mux3
-# Loading work.SuperALU
-# Loading work.ALU
-# Loading work.Sumador_Completo
-# Loading work.PixProm
-# Loading work.Umbral
-# Loading work.Condition_Unit
-# Loading work.flopenr
-# Loading work.condcheck
-# Loading work.RegEM
-# Loading work.Memory
-# Loading work.RAM
-# Loading altera_mf_ver.altsyncram
-# Loading work.RegMW
-# Loading work.Hazard_Unit
-# Loading work.Sumador_1bit
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[7]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[6]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[5]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[4]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[3]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[2]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[1]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[0]
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00000010011100000000000111
-# InstrD=00010100000001000000000101
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-quit -sim
-# End time: 22:06:22 on Jul 08,2020, Elapsed time: 0:10:03
-# Errors: 0, Warnings: 0
-vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline
-# vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline 
-# Start time: 22:06:31 on Jul 08,2020
-# Loading sv_std.std
-# Loading work.testbench_Pipeline
-# Loading work.Pipeline_ARM
-# Loading work.StopCounter
-# Loading work.VGAController
-# Loading work.ContadorNeg
-# Loading work.FlipFlop_SR
-# Loading work.Fetch
-# Loading work.PCreg
-# Loading work.Mux2
-# Loading work.MemInst
-# Loading work.RegFD
-# Loading work.Decode
-# Loading work.Control_Unit
-# Loading work.BancoRegistros
-# Loading work.Extend
-# Loading work.RegDE
-# Loading work.Execute
-# Loading work.Mux3
-# Loading work.SuperALU
-# Loading work.ALU
-# Loading work.Sumador_Completo
-# Loading work.PixProm
-# Loading work.Umbral
-# Loading work.Condition_Unit
-# Loading work.flopenr
-# Loading work.condcheck
-# Loading work.RegEM
-# Loading work.Memory
-# Loading work.RAM
-# Loading altera_mf_ver.altsyncram
-# Loading work.RegMW
-# Loading work.Hazard_Unit
-# Loading work.Sumador_1bit
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[7]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[6]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[5]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[4]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[3]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[2]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[1]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[0]
-quit -sim
-# End time: 22:07:25 on Jul 08,2020, Elapsed time: 0:00:54
-# Errors: 0, Warnings: 0
-vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline
-# vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline 
-# Start time: 22:08:48 on Jul 08,2020
-# Loading sv_std.std
-# Loading work.testbench_Pipeline
-# Loading work.Pipeline_ARM
-# Loading work.StopCounter
-# Loading work.VGAController
-# Loading work.ContadorNeg
-# Loading work.FlipFlop_SR
-# Loading work.Fetch
-# Loading work.PCreg
-# Loading work.Mux2
-# Loading work.MemInst
-# Loading work.RegFD
-# Loading work.Decode
-# Loading work.Control_Unit
-# Loading work.BancoRegistros
-# Loading work.Extend
-# Loading work.RegDE
-# Loading work.Execute
-# Loading work.Mux3
-# Loading work.SuperALU
-# Loading work.ALU
-# Loading work.Sumador_Completo
-# Loading work.PixProm
-# Loading work.Umbral
-# Loading work.Condition_Unit
-# Loading work.flopenr
-# Loading work.condcheck
-# Loading work.RegEM
-# Loading work.Memory
-# Loading work.RAM
-# Loading altera_mf_ver.altsyncram
-# Loading work.RegMW
-# Loading work.Hazard_Unit
-# Loading work.Sumador_1bit
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[7]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[6]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[5]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[4]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[3]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[2]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[1]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[0]
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=00000010011100000000000111
-# InstrD=00000010011100000000000111
-# InstrD=00010100000001000000000101
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00101100000001000000000000
-# InstrD=00101100100010000000000000
-# InstrD=00101100100010000000000000
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-restart -f
-quit -sim
-# End time: 22:12:12 on Jul 08,2020, Elapsed time: 0:03:24
-# Errors: 0, Warnings: 0
-vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline
-# vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline 
-# Start time: 22:12:21 on Jul 08,2020
-# Loading sv_std.std
-# Loading work.testbench_Pipeline
-# Loading work.Pipeline_ARM
-# Loading work.StopCounter
-# Loading work.VGAController
-# Loading work.ContadorNeg
-# Loading work.FlipFlop_SR
-# Loading work.Fetch
-# Loading work.PCreg
-# Loading work.Mux2
-# Loading work.MemInst
-# Loading work.RegFD
-# Loading work.Decode
-# Loading work.Control_Unit
-# Loading work.BancoRegistros
-# Loading work.Extend
-# Loading work.RegDE
-# Loading work.Execute
-# Loading work.Mux3
-# Loading work.SuperALU
-# Loading work.ALU
-# Loading work.Sumador_Completo
-# Loading work.PixProm
-# Loading work.Umbral
-# Loading work.Condition_Unit
-# Loading work.flopenr
-# Loading work.condcheck
-# Loading work.RegEM
-# Loading work.Memory
-# Loading work.RAM
-# Loading altera_mf_ver.altsyncram
-# Loading work.RegMW
-# Loading work.Hazard_Unit
-# Loading work.Sumador_1bit
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[7]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[6]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[5]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[4]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[3]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[2]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[1]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[0]
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=00000010011100000000000111
-# InstrD=00000010011100000000000111
-# InstrD=00010100000001000000000101
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00000010011100000000000111
-# InstrD=00101100000001000000000000
-# InstrD=00101100100010000000000000
-run
-# InstrD=00101100100010000000000000
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-quit -sim
-# End time: 22:14:20 on Jul 08,2020, Elapsed time: 0:01:59
-# Errors: 0, Warnings: 0
-vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline
-# vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline 
-# Start time: 22:14:32 on Jul 08,2020
-# Loading sv_std.std
-# Loading work.testbench_Pipeline
-# Loading work.Pipeline_ARM
-# Loading work.StopCounter
-# Loading work.VGAController
-# Loading work.ContadorNeg
-# Loading work.FlipFlop_SR
-# Loading work.Fetch
-# Loading work.PCreg
-# Loading work.Mux2
-# Loading work.MemInst
-# Loading work.RegFD
-# Loading work.Decode
-# Loading work.Control_Unit
-# Loading work.BancoRegistros
-# Loading work.Extend
-# Loading work.RegDE
-# Loading work.Execute
-# Loading work.Mux3
-# Loading work.SuperALU
-# Loading work.ALU
-# Loading work.Sumador_Completo
-# Loading work.PixProm
-# Loading work.Umbral
-# Loading work.Condition_Unit
-# Loading work.flopenr
-# Loading work.condcheck
-# Loading work.RegEM
-# Loading work.Memory
-# Loading work.RAM
-# Loading altera_mf_ver.altsyncram
-# Loading work.RegMW
-# Loading work.Hazard_Unit
-# Loading work.Sumador_1bit
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[7]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[6]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[5]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[4]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[3]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[2]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[1]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[0]
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=00000010011100000000000111
-# InstrD=00000010011100000000000111
-# InstrD=00010100000001000000000101
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00101100000001000000000000
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-quit -sim
-# End time: 22:17:39 on Jul 08,2020, Elapsed time: 0:03:07
-# Errors: 0, Warnings: 0
-vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline
-# vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline 
-# Start time: 22:17:50 on Jul 08,2020
-# Loading sv_std.std
-# Loading work.testbench_Pipeline
-# Loading work.Pipeline_ARM
-# Loading work.StopCounter
-# Loading work.VGAController
-# Loading work.ContadorNeg
-# Loading work.FlipFlop_SR
-# Loading work.Fetch
-# Loading work.PCreg
-# Loading work.Mux2
-# Loading work.MemInst
-# Loading work.RegFD
-# Loading work.Decode
-# Loading work.Control_Unit
-# Loading work.BancoRegistros
-# Loading work.Extend
-# Loading work.RegDE
-# Loading work.Execute
-# Loading work.Mux3
-# Loading work.SuperALU
-# Loading work.ALU
-# Loading work.Sumador_Completo
-# Loading work.PixProm
-# Loading work.Umbral
-# Loading work.Condition_Unit
-# Loading work.flopenr
-# Loading work.condcheck
-# Loading work.RegEM
-# Loading work.Memory
-# Loading work.RAM
-# Loading altera_mf_ver.altsyncram
-# Loading work.RegMW
-# Loading work.Hazard_Unit
-# Loading work.Sumador_1bit
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[7]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[6]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[5]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[4]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[3]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[2]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[1]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[0]
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=00000010011100000000000111
-# InstrD=00000010011100000000000111
-# InstrD=00010100000001000000000101
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-quit -sim
-# End time: 22:19:55 on Jul 08,2020, Elapsed time: 0:02:05
-# Errors: 0, Warnings: 0
-vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline
-# vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline 
-# Start time: 22:20:06 on Jul 08,2020
-# Loading sv_std.std
-# Loading work.testbench_Pipeline
-# Loading work.Pipeline_ARM
-# Loading work.StopCounter
-# Loading work.VGAController
-# Loading work.ContadorNeg
-# Loading work.FlipFlop_SR
-# Loading work.Fetch
-# Loading work.PCreg
-# Loading work.Mux2
-# Loading work.MemInst
-# Loading work.RegFD
-# Loading work.Decode
-# Loading work.Control_Unit
-# Loading work.BancoRegistros
-# Loading work.Extend
-# Loading work.RegDE
-# Loading work.Execute
-# Loading work.Mux3
-# Loading work.SuperALU
-# Loading work.ALU
-# Loading work.Sumador_Completo
-# Loading work.PixProm
-# Loading work.Umbral
-# Loading work.Condition_Unit
-# Loading work.flopenr
-# Loading work.condcheck
-# Loading work.RegEM
-# Loading work.Memory
-# Loading work.RAM
-# Loading altera_mf_ver.altsyncram
-# Loading work.RegMW
-# Loading work.Hazard_Unit
-# Loading work.Sumador_1bit
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[7]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[6]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[5]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[4]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[3]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[2]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[1]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[0]
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=00000010011100000000000111
-# InstrD=00000010011100000000000111
-# InstrD=00010100000001000000000101
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00000010011100000000000111
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-quit -sim
-# End time: 22:21:17 on Jul 08,2020, Elapsed time: 0:01:11
-# Errors: 0, Warnings: 0
-vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline
-# vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline 
-# Start time: 22:21:25 on Jul 08,2020
-# Loading sv_std.std
-# Loading work.testbench_Pipeline
-# Loading work.Pipeline_ARM
-# Loading work.StopCounter
-# Loading work.VGAController
-# Loading work.ContadorNeg
-# Loading work.FlipFlop_SR
-# Loading work.Fetch
-# Loading work.PCreg
-# Loading work.Mux2
-# Loading work.MemInst
-# Loading work.RegFD
-# Loading work.Decode
-# Loading work.Control_Unit
-# Loading work.BancoRegistros
-# Loading work.Extend
-# Loading work.RegDE
-# Loading work.Execute
-# Loading work.Mux3
-# Loading work.SuperALU
-# Loading work.ALU
-# Loading work.Sumador_Completo
-# Loading work.PixProm
-# Loading work.Umbral
-# Loading work.Condition_Unit
-# Loading work.flopenr
-# Loading work.condcheck
-# Loading work.RegEM
-# Loading work.Memory
-# Loading work.RAM
-# Loading altera_mf_ver.altsyncram
-# Loading work.RegMW
-# Loading work.Hazard_Unit
-# Loading work.Sumador_1bit
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[7]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[6]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[5]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[4]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[3]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[2]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[1]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[0]
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00000010011100000000000111
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-quit -sim
-# End time: 22:22:31 on Jul 08,2020, Elapsed time: 0:01:06
-# Errors: 0, Warnings: 0
-vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline
-# vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline 
-# Start time: 22:23:41 on Jul 08,2020
-# Loading sv_std.std
-# Loading work.testbench_Pipeline
-# Loading work.Pipeline_ARM
-# Loading work.StopCounter
-# Loading work.VGAController
-# Loading work.ContadorNeg
-# Loading work.FlipFlop_SR
-# Loading work.Fetch
-# Loading work.PCreg
-# Loading work.Mux2
-# Loading work.MemInst
-# Loading work.RegFD
-# Loading work.Decode
-# Loading work.Control_Unit
-# Loading work.BancoRegistros
-# Loading work.Extend
-# Loading work.RegDE
-# Loading work.Execute
-# Loading work.Mux3
-# Loading work.SuperALU
-# Loading work.ALU
-# Loading work.Sumador_Completo
-# Loading work.PixProm
-# Loading work.Umbral
-# Loading work.Condition_Unit
-# Loading work.flopenr
-# Loading work.condcheck
-# Loading work.RegEM
-# Loading work.Memory
-# Loading work.RAM
-# Loading altera_mf_ver.altsyncram
-# Loading work.RegMW
-# Loading work.Hazard_Unit
-# Loading work.Sumador_1bit
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[7]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[6]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[5]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[4]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[3]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[2]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[1]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[0]
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00000010011100000000000111
-# InstrD=00010100000001000000000101
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-quit -sim
-# End time: 22:25:57 on Jul 08,2020, Elapsed time: 0:02:16
-# Errors: 0, Warnings: 0
-vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline
-# vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline 
-# Start time: 22:26:11 on Jul 08,2020
-# Loading sv_std.std
-# Loading work.testbench_Pipeline
-# Loading work.Pipeline_ARM
-# Loading work.StopCounter
-# Loading work.VGAController
-# Loading work.ContadorNeg
-# Loading work.FlipFlop_SR
-# Loading work.Fetch
-# Loading work.PCreg
-# Loading work.Mux2
-# Loading work.MemInst
-# Loading work.RegFD
-# Loading work.Decode
-# Loading work.Control_Unit
-# Loading work.BancoRegistros
-# Loading work.Extend
-# Loading work.RegDE
-# Loading work.Execute
-# Loading work.Mux3
-# Loading work.SuperALU
-# Loading work.ALU
-# Loading work.Sumador_Completo
-# Loading work.PixProm
-# Loading work.Umbral
-# Loading work.Condition_Unit
-# Loading work.flopenr
-# Loading work.condcheck
-# Loading work.RegEM
-# Loading work.Memory
-# Loading work.RAM
-# Loading altera_mf_ver.altsyncram
-# Loading work.RegMW
-# Loading work.Hazard_Unit
-# Loading work.Sumador_1bit
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[7]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[6]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[5]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[4]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[3]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[2]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[1]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[0]
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00000010011100000000000111
-# InstrD=00010100000001000000000101
-# InstrD=00101100000001000000000000
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-quit -sim
-# End time: 22:27:31 on Jul 08,2020, Elapsed time: 0:01:20
-# Errors: 0, Warnings: 0
-vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline
-# vsim -gui -l msim_transcript -L altera_mf_ver work.testbench_Pipeline 
-# Start time: 22:27:47 on Jul 08,2020
-# Loading sv_std.std
-# Loading work.testbench_Pipeline
-# Loading work.Pipeline_ARM
-# Loading work.StopCounter
-# Loading work.VGAController
-# Loading work.ContadorNeg
-# Loading work.FlipFlop_SR
-# Loading work.Fetch
-# Loading work.PCreg
-# Loading work.Mux2
-# Loading work.MemInst
-# Loading work.RegFD
-# Loading work.Decode
-# Loading work.Control_Unit
-# Loading work.BancoRegistros
-# Loading work.Extend
-# Loading work.RegDE
-# Loading work.Execute
-# Loading work.Mux3
-# Loading work.SuperALU
-# Loading work.ALU
-# Loading work.Sumador_Completo
-# Loading work.PixProm
-# Loading work.Umbral
-# Loading work.Condition_Unit
-# Loading work.flopenr
-# Loading work.condcheck
-# Loading work.RegEM
-# Loading work.Memory
-# Loading work.RAM
-# Loading altera_mf_ver.altsyncram
-# Loading work.RegMW
-# Loading work.Hazard_Unit
-# Loading work.Sumador_1bit
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[7]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[6]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[5]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[4]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[3]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[2]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[1]
-add wave -position end  sim:/testbench_Pipeline/dut/decode/BR/rf[0]
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00101100100001100100000000
-# InstrD=00000010011100000000000111
-# InstrD=00010100000001000000000101
-# InstrD=00101100000001000000000000
-# InstrD=00101100100010000000000000
-# InstrD=00101100100010000000000000
-run
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# InstrD=xxxxxxxxxxxxxxxxxxxxxxxxxx
-# End time: 22:30:30 on Jul 08,2020, Elapsed time: 0:02:43
-# Errors: 0, Warnings: 0
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=0xxxxxxxxxxxxxxxxxxxxxxxxx
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=0xxxxxxxxxxxxxxxxxxxxxxxxx
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=0xxxxxxxxxxxxxxxxxxxxxxxxx
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=0xxxxxxxxxxxxxxxxxxxxxxxxx
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=0xxxxxxxxxxxxxxxxxxxxxxxxx
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=0xxxxxxxxxxxxxxxxxxxxxxxxx
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=0xxxxxxxxxxxxxxxxxxxxxxxxx
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=0xxxxxxxxxxxxxxxxxxxxxxxxx
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=0xxxxxxxxxxxxxxxxxxxxxxxxx
+# InstrD=0xxxxxxxxxxxxxxxxxxxxxxxxx,   InstrDV=0xxxxxxxxxxxxxxxxxxxxxxxxx
+# End time: 23:05:26 on Jul 11,2020, Elapsed time: 0:01:06
+# Errors: 0, Warnings: 2
