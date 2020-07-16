@@ -1,0 +1,22 @@
+{
+	"system" : {
+		"platform" : "windows64",
+		"os_name" : "Windows 10",
+		"os_version" : "10.0"
+	},
+	"error" : {
+		"executable" : "quartus_map",
+		"comment" : "not_applicable",
+		"error_message" : "can't wire into a constant value",
+		"source_file" : "/quartus/synth/vrfx/verific/verilog/verivalue_elab.cpp",
+		"line" : "6463",
+		"stack_trace" : "\t0x7ff870151bb6: synth_vrfx + 0x51bb6 (?vrfx_altera_ie@@YAXPEBD0H@Z + 0x16)\n\t0x7ff870255df7: synth_vrfx + 0x155df7 (?CreateKnownPortRefs@VeriExpression@@UEAAIPEAVInstance@@PEBVVeriIdDef@@PEAVVeriConstraint@@I@Z + 0x387)\n\t0x7ff870256040: synth_vrfx + 0x156040 (?CreateKnownPortRefs@VeriPortConnect@@UEAAIPEAVInstance@@PEBVVeriIdDef@@PEAVVeriConstraint@@I@Z + 0x1e0)\n\t0x7ff8702821f3: synth_vrfx + 0x1821f3 (?CreatePortRefs@VeriInst@@QEAAXPEAVInstance@@PEBVArray@@@Z + 0x2b3)\n\t0x7ff870284fbd: synth_vrfx + 0x184fbd (?InstantiateModule@VeriInst@@QEAAXPEAVNetlist@@PEAVMap@@PEAVArray@@@Z + 0x25d)\n\t0x7ff87028551d: synth_vrfx + 0x18551d (?InstantiateModule@VeriInst@@QEAAXPEBD@Z + 0x4fd)\n\t0x7ff87028922f: synth_vrfx + 0x18922f (?Elaborate@VeriModuleInstantiation@@UEAAXXZ + 0x22f)\n\t0x7ff8701eef75: synth_vrfx + 0xeef75 (?Elaborate@VeriModule@@MEAAXXZ + 0x85)\n\t0x7ff8701ef541: synth_vrfx + 0xef541 (?Elaborate@VeriModule@@UEAAPEAVNetlist@@PEAVLibrary@@PEAVMap@@PEAVArray@@IPEAPEAVVeriScope@@IPEAVVeriConfiguration@@PEAVBASEX_ELABORATE_INFO@@@Z + 0x581)\n\t0x7ff870170b1a: synth_vrfx + 0x70b1a (?elaborate@VRFX_VERIFIC_VERILOG_ELABORATOR@@UEAAPEAVNetlist@@PEAVBASEX_ELABORATE_INFO@@@Z + 0x6da)\n\t0x7ff870169bb7: synth_vrfx + 0x69bb7 (?elaborate@VRFX_ELABORATOR@@UEAAPEAVHDB_COMPONENT_SCHEMA@@PEAVBASEX_ELABORATE_INFO@@@Z + 0xd7)\n\t0x7ff891c9ab8f: synth_sgn + 0xdab8f (?elaborate@SGN_FN_LIB@@AEBAXPEAVBASEX_ELAB_INFO_CORE@@@Z + 0x24f)\n\t0x7ff891ca37bf: synth_sgn + 0xe37bf (?start_vrf_flow@SGN_FN_LIB@@AEBAXXZ + 0xf)\n\t0x7ff891ca1d9b: synth_sgn + 0xe1d9b (?start@SGN_FN_LIB@@QEAAXPEAVSGN_WRAPPER_INFO@@@Z + 0xa1b)\n\t0x7ff891c8294a: synth_sgn + 0xc294a (?single_module_extraction@SGN_EXTRACTOR@@AEBAKPEAVHDB_INSTANCE_NAME@@PEAVHDB_ENTITY@@PEAVSGN_WRAPPER_INFO@@@Z + 0x15a)\n\t0x7ff891c77524: synth_sgn + 0xb7524 (?recursive_extraction@SGN_EXTRACTOR@@AEAAKPEAVHDB_INSTANCE_NAME@@PEAVSGN_WRAPPER_INFO@@PEBD@Z + 0x204)\n\t0x7ff891c708c3: synth_sgn + 0xb08c3 (?extract@SGN_EXTRACTOR@@QEAAXXZ + 0x1d3)\n\t0x7ff891bd324e: synth_sgn + 0x1324e (?sgn_qic_full@@YA?AW4SGN_STATE_ENUM@@PEAVCMP_FACADE@@AEAV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@AEAV?$vector@NV?$allocator@N@std@@@4@@Z + 0x19e)\n\t0x7ff6c68b4351: quartus_map + 0x4351 (?qsyn_execute_sgn@@YA?AW4SGN_STATE_ENUM@@PEAVCMP_FACADE@@AEAV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@4@PEAVTHR_NAMED_PIPE@@3@Z + 0x131)\n\t0x7ff6c68c3f9c: quartus_map + 0x13f9c (?execute_core@QSYN_FRAMEWORK@@AEAA_NPEAVTHR_NAMED_PIPE@@0@Z + 0x12c)\n\t0x7ff6c68c3aa6: quartus_map + 0x13aa6 (?execute@QSYN_FRAMEWORK@@UEAA_NXZ + 0x496)\n\t0x7ff8bb0612bc: comp_qexe + 0x112bc (qexe_do_normal + 0x1ec)\n\t0x7ff8bb066142: comp_qexe + 0x16142 (qexe_run + 0x432)\n\t0x7ff8bb066e51: comp_qexe + 0x16e51 (?qexe_standard_main@@YAHPEAVQEXE_FRAMEWORK@@PEAPEBUQEXE_OPTION_DEFINITION@@HPEAPEBD@Z + 0xc1)\n\t0x7ff6c68cb08b: quartus_map + 0x1b08b (?qsyn_main@@YAHHPEAPEBD@Z + 0x51b)\n\t0x7ff8b5722e98: CCL_MSG + 0x12e98 (?msg_main_thread@@YAPEAXPEAX@Z + 0x18)\n\t0x7ff8b572467e: CCL_MSG + 0x1467e (?msg_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x6e)\n\t0x7ff8c7bf6660: ccl_mem + 0x16660 (?mem_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x70)\n\t0x7ff8b5722761: CCL_MSG + 0x12761 (?msg_exe_main@@YAHHPEAPEBDP6AHH0@Z@Z + 0xa1)\n\t0x7ff6c68d9872: quartus_map + 0x29872 (__tmainCRTStartup + 0x10e)\n\t0x7ff8e0034033: KERNEL32 + 0x14033 (BaseThreadInitThunk + 0x13)\n\t0x7ff8e0b03690: ntdll + 0x73690 (RtlUserThreadStart + 0x20)\n",
+		"subsystem" : "VRFX"
+	},
+	"quartus" : {
+		"quartus_bits" : "64",
+		"version" : "18.1.0",
+		"build" : "625",
+		"edition" : "Lite Edition"
+	}
+}

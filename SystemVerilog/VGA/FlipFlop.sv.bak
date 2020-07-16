@@ -1,0 +1,18 @@
+module FlipFlop #(parameter N=1)
+	(input logic [N-1:0] data,
+	input [2:0] expectedState, state,
+	 input logic clk, reset,load,
+	 output logic [N-1:0] q);
+	 
+	always_ff@(posedge clk)
+		if(reset)
+		begin
+			q = 0;
+		end
+		else if(load&&(expectedState==state))
+		begin
+			q = data;
+		end
+
+								 
+endmodule

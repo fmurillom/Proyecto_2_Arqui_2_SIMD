@@ -1,0 +1,213 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk50'
+Slack : -7.859
+TNS   : -22719.371
+
+Type  : Slow 1100mV 85C Model Setup 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : -4.685
+TNS   : -507.937
+
+Type  : Slow 1100mV 85C Model Setup 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : -1.909
+TNS   : -20.728
+
+Type  : Slow 1100mV 85C Model Hold 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : 0.278
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk50'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : 0.687
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : -4.366
+TNS   : -43.634
+
+Type  : Slow 1100mV 85C Model Recovery 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : -1.541
+TNS   : -18.455
+
+Type  : Slow 1100mV 85C Model Removal 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : 0.660
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : 1.013
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk50'
+Slack : -2.174
+TNS   : -28093.634
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : -2.174
+TNS   : -26130.533
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : -0.394
+TNS   : -6.587
+
+Type  : Slow 1100mV 0C Model Setup 'clk50'
+Slack : -7.705
+TNS   : -21184.792
+
+Type  : Slow 1100mV 0C Model Setup 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : -4.552
+TNS   : -511.747
+
+Type  : Slow 1100mV 0C Model Setup 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : -1.986
+TNS   : -21.600
+
+Type  : Slow 1100mV 0C Model Hold 'clk50'
+Slack : 0.257
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : 0.673
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : -4.211
+TNS   : -42.083
+
+Type  : Slow 1100mV 0C Model Recovery 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : -1.476
+TNS   : -17.677
+
+Type  : Slow 1100mV 0C Model Removal 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : 0.644
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : 0.993
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk50'
+Slack : -2.174
+TNS   : -28130.286
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : -2.174
+TNS   : -26227.832
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : -0.394
+TNS   : -6.880
+
+Type  : Fast 1100mV 85C Model Setup 'clk50'
+Slack : -4.205
+TNS   : -13175.414
+
+Type  : Fast 1100mV 85C Model Setup 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : -2.562
+TNS   : -212.052
+
+Type  : Fast 1100mV 85C Model Setup 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : -0.746
+TNS   : -7.712
+
+Type  : Fast 1100mV 85C Model Hold 'clk50'
+Slack : -0.274
+TNS   : -9.237
+
+Type  : Fast 1100mV 85C Model Hold 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : 0.158
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : 0.351
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : -2.695
+TNS   : -26.938
+
+Type  : Fast 1100mV 85C Model Recovery 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : -0.538
+TNS   : -6.446
+
+Type  : Fast 1100mV 85C Model Removal 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : 0.369
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : 0.502
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk50'
+Slack : -2.174
+TNS   : -30216.822
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : -2.174
+TNS   : -26074.294
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : 0.160
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clk50'
+Slack : -3.799
+TNS   : -10784.722
+
+Type  : Fast 1100mV 0C Model Setup 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : -2.230
+TNS   : -196.041
+
+Type  : Fast 1100mV 0C Model Setup 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : -0.695
+TNS   : -7.154
+
+Type  : Fast 1100mV 0C Model Hold 'clk50'
+Slack : -0.257
+TNS   : -11.148
+
+Type  : Fast 1100mV 0C Model Hold 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : 0.144
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : 0.319
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : -2.320
+TNS   : -23.195
+
+Type  : Fast 1100mV 0C Model Recovery 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : -0.454
+TNS   : -5.433
+
+Type  : Fast 1100mV 0C Model Removal 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : 0.309
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : 0.450
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk50'
+Slack : -2.174
+TNS   : -29904.731
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mainController:main|VGA_Controller:vgac|clockDivider:cd1|counter[0]'
+Slack : -2.174
+TNS   : -26083.567
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mainController:main|VGA_Controller:vgac|hsync_generator:hsg|nBitCounter:nb1|count[1]'
+Slack : 0.156
+TNS   : 0.000
+
+------------------------------------------------------------

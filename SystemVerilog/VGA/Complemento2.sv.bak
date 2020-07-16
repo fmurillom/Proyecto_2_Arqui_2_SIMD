@@ -1,0 +1,17 @@
+module Complemento2
+	( 
+	input [7:0] Exponente,
+	input val,
+	output reg [7:0] S
+	);
+	always @(val )
+	begin
+
+		if(val==1)begin
+			assign S=~Exponente+1;
+		end
+		else begin
+			assign S= Exponente;
+		end
+	end
+endmodule

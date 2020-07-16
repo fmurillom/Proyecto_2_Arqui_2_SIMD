@@ -1,0 +1,9 @@
+module VGA_ControllerTB();
+
+	logic FPGA_Clock,
+	logic [7:0] R,G,B,
+	logic [7:0] VGA_R,VGA_G,VGA_B,
+	logic VGA_Clock, VGA_SYNC_N, VGA_BLANK_N, VGA_HS, VGA_VS
+
+
+enmodule

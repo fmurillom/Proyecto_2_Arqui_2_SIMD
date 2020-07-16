@@ -18,7 +18,9 @@ module Execute (	input logic clk, reset,
 	Mux3 # (32) mux_ra2E (RD2E, ResultW, ALUResultMFB, ForwardBE, WriteDataE);
 	Mux2 # (32) mux_op2  (WriteDataE, ExtImmE, ALUSrcE, Op2);
 	
-	SuperALU alu (Op1, Op2, ALUControlE, ALUFlags, ALUResultE);
+	//SuperALU alu (Op1, Op2, ALUControlE, ALUFlags, ALUResultE);
+	
+	ALU #(32) alu( Op1, Op2, ALUControlE[1:0], ALUFlags, ALUResultE);
 	
 	logic PCSrcEA, RegWriteEA, MemWriteEA;
 	

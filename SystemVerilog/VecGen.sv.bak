@@ -1,0 +1,66 @@
+module VecGen( input logic [15:0] addr,
+					input logic [31:0] memRead,
+					input logic MemWrite,
+					input logic MemWriteMV,
+					output logic [15:0] vecAddr,
+					output logic [255:0] vector,
+					output logic vecWrite)
+					
+logic [255:0] vecAux;
+
+always_comb
+
+	case(addr)
+	
+	16'd256: begin
+				if(MemWrite) vecAux[31:0] <= memRead
+			end
+	
+	16'd257: begin
+				if(MemWrite) vecAux[63:32] <= memRead
+			end
+			
+	16'd258: begin
+				if(MemWrite) vecAux[95:64] <= memRead
+			end
+
+	16'd259: begin
+				if(MemWrite) vecAux[127:96] <= memRead
+			end
+
+	16'd260: begin
+				if(MemWrite) vecAux[159:128] <= memRead
+			end
+			
+	16'd261: begin
+				if(MemWrite) vecAux[191:160] <= memRead
+			end
+			
+	16'd262: begin
+				if(MemWrite) vecAux[223:192] <= memRead
+			end
+			
+			
+	16'd263: begin
+				if(MemWrite) vecAux[255:224] <= memRead
+			end
+			
+	16'd264: begin
+				case (memRead)
+					32'd0: begin
+							vecAddr <= 16'd0
+							vecWrite <= 1b'1
+						end
+						
+					32'd1: begin
+							vecAddr <= 16'd0
+							vecWrite <= 1b'1
+						end
+						
+					32'd2: begin
+							vecAddr <= 16'd0
+							vecWrite <= 1b'1
+						end
+			end
+
+endmodule

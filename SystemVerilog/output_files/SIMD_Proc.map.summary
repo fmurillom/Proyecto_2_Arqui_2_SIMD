@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sat Jul 11 23:03:06 2020
+Analysis & Synthesis Status : Successful - Wed Jul 15 20:04:58 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : SIMD_Proc
-Top-level Entity Name : Pipeline_ARM
+Top-level Entity Name : Pipeline_SIMD
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 545
-Total pins : 213
+Total registers : 615
+Total pins : 214
 Total virtual pins : 0
 Total block memory bits : 2,097,152
 Total DSP Blocks : 1

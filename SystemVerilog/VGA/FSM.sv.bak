@@ -1,0 +1,85 @@
+module FSM(
+	input clk,
+	input rst,
+	input button,
+	input [2:0] inState,
+	input start,
+	output logic [2:0] S
+);
+
+	logic [2:0] state;
+	logic [2:0] next_state;
+	
+	//Sequential logic
+	
+	always_ff @(posedge clk, posedge rst)
+		begin
+			if (rst) begin
+				state<= 3'b000;
+				S<=3'b000;
+				end
+			else begin 
+				state<=next_state;
+				S<=next_state;
+				end
+		end
+		
+	
+	//Combinatioanl Logic
+	always_comb
+		begin
+			case(state)
+			3'b000: begin
+				if(start) begin 
+					next_state= 3'b001;
+					//S=3'b001;
+					end
+				else begin
+					next_state=3'b000;
+					//S=3'b000;
+					end
+				end
+				
+			3'b001: begin
+				if(!button) begin
+					next_state= 3'b010;
+					//S=3'b010;
+					end
+				else begin 
+					next_state=3'b001;
+					//S=3'b001;
+					end
+				end
+			3'b010: begin
+				if(!button) begin 
+					next_state= 3'b011;
+					//S=3'b011;
+					end
+				else begin 
+					next_state=3'b010;
+					//S=3'b010;
+					end
+				end
+			3'b011: begin
+				if(!button) begin 
+					next_state= 3'b100;
+					//S=3'b100;
+					end
+				else begin 
+					next_state=3'b011;
+					//S=3'b011;
+					end
+				end
+			3'b100: begin
+				if(!button) begin
+					next_state= 3'b000;
+					//S=3'b000;
+					end
+				else begin 
+					next_state=3'b100;
+					//S=3'b100;
+					end
+				end
+			endcase
+		end
+endmodule 

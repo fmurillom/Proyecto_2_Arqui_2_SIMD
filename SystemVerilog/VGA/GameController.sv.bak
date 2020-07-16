@@ -1,0 +1,11 @@
+module GameController(
+	input FPGA_Clock,
+	//input [7:0] R,G,B,
+	input R,G,B,
+	output [7:0] VGA_R,VGA_G,VGA_B,
+	output VGA_Clock, 
+	output VGA_SYNC_N, VGA_BLANK_N, VGA_HS, VGA_VS
+	);
+	
+	
+endmodule

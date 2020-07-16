@@ -1,0 +1,8 @@
+module hexaToBinary(
+	input [5:0] hexa,
+	output [23:0] binary
+	);
+	
+	
+
+endmodule 

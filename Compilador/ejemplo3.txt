@@ -1,0 +1,14 @@
+add r0, r0, #0
+ldr r1, [r5 , #267]
+str r2, [r1 , #0]
+subs r4, r3 , r1
+bge Greater
+sub r4, r0, r5
+Greater:
+addv r7, r6 , #48
+mulv r5, r3, r4
+div r4, r3, r2
+divv r5, r3, r1
+addv r3, r2, #10
+strv r1, [r2, r3]
+ldrv r2, [r5, #10]

@@ -3,12 +3,12 @@ module Fetch_testbench ();
 	logic clk, reset;
 	logic [31:0] ResultW, ALUResultE;
 	logic PCSrcW, BranchTakenE, StallF, StallD, FlushD;
-	logic [31:0] InstrD, PCPlus8D;
+	logic [31:0] InstrD, InstrDV, PCPlus8D;
 
 Fetch dut( 	clk, reset,
 				ResultW, ALUResultE,
 				PCSrcW, BranchTakenE, StallF, StallD, FlushD,
-				InstrD, PCPlus8D);
+				InstrD, InstrDV, PCPlus8D);
 				
 initial
 begin

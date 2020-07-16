@@ -3,11 +3,20 @@ module Memory (input logic clk, clock_vga,
 					input logic [31:0] ALUResultM, WriteDataM,
 					input logic [2:0] WA3M,
 					input logic [15:0] VGAArd,
+					input logic PCSrcMV, RegWriteMV, MemtoRegMV, MemWriteMV,
+					input logic [255:0] ALUResultMV, WriteDataMV,
+					input logic [2:0] WA3MV,
+					input logic [15:0] VGAArdV,
 					output logic PCSrcW, RegWriteW, MemtoRegW,
 					output logic [31:0] ReadDataW, ALUOutW, ALUOutM, VGAData,
-					output logic [2:0] WA3W);
+					output logic [2:0] WA3W,
+					output logic PCSrcWV, RegWriteWV, MemtoRegWV,
+					output logic [255:0] ReadDataWV, ALUOutWV, ALUOutMV, VGADataV,
+					output logic [2:0] WA3WV);
 
 	logic [31:0] MemOut;
+	logic [255:0] MemOutV;
+
 	
 	//MemDatos memdatos (clk, MemWriteM, ALUResultM, WriteDataM, MemOut);
 	
@@ -16,7 +25,28 @@ module Memory (input logic clk, clock_vga,
 	assign wren_b = 0;
 	assign data_b = 32'b0;
 	
+	logic wren_bV;
+	logic [31:0] data_bV;
+	assign wren_bV = 0;
+	assign data_bV = 32'b0;
+	
+	logic [15:0] vecAddr, VectorAddr;
+	logic [255:0] vector, VectorWrite;
+	logic vecWrite;
+	
+	logic writeV;
+	
+	
 	RAM memdatos (ALUResultM[15:0], VGAArd, clk, clock_vga, WriteDataM, data_b, MemWriteM, wren_b, MemOut, VGAData);
+	
+	VecGen vecG (clk, ALUResultM[15:0], MemOut, MemWriteM, vecAddr, vector, vecWrite);
+	
+	Mux2 #(256) vecMux (WriteDataMV, vector, vecWrite, VectorWrite);
+	Mux2 #(16) vecAddres (ALUResultMV[15:0], vecAddr, vecWrite, VectorAddr);
+	
+	assign writeV = MemWriteMV || vecWrite;
+	
+	RamV memdatosV(VectorAddr, clk, VectorWrite, writeV, MemOutV);
 	
 	//registro de Mem-WB
 	
@@ -29,5 +59,16 @@ module Memory (input logic clk, clock_vga,
 					PCSrcW, RegWriteW, MemtoRegW,
 					ReadDataW, ALUOutW,
 					WA3W);
+					
+	assign ALUOutMV = ALUResultMV;
+	
+	RegMWV regmwV(clk,
+					PCSrcMV, RegWriteMV, MemtoRegMV,
+					MemOutV, ALUResultMV,
+					WA3MV,
+					PCSrcWV, RegWriteWV, MemtoRegWV,
+					ReadDataWV, ALUOutWV,
+					WA3WV);
+					
 
 endmodule 

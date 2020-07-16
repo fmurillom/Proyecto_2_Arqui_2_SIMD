@@ -9,19 +9,19 @@ always_comb
 	
 	1'b0: begin
 				InstOut = Inst;
-				InstOutV = 25'bx;
+				InstOutV = 25'h500000;
 			end
 
 
 	// 12-bit unsigned immediate
 	1'b1: begin
-				InstOut = 25'bx;
+				InstOut = 25'h500000;
 				InstOutV = Inst;
 			end
 	
 	default: begin
-					InstOut = 25'bx;
-					InstOutV = 25'bx;// undefined
+					InstOut = 25'h500000;
+					InstOutV = 25'h500000;// undefined
 				end
 	endcase
 

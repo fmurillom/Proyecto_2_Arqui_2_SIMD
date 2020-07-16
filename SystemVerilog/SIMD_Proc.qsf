@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY Pipeline_ARM
+set_global_assignment -name TOP_LEVEL_ENTITY Pipeline_SIMD
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:56:21  JULY 05, 2020"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -47,13 +47,56 @@ set_global_assignment -name BOARD "DE1-SoC Board"
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (SystemVerilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_id eda_simulation
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_AF14 -to clk50
+set_global_assignment -name SYSTEMVERILOG_FILE Pipeline_SIMD.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/WinSpriteCharacter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/vsync_generator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/VGA_ControllerTB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/VGA_Controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/vdisplayareaverificator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/userSelectionVerificator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/Substractor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/spritePositionVerificator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/spriteLoader.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/SpriteCharacter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/Sprite.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/sleepTB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/sleep.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/screenDivisionVerificator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/Restador.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/RandomTB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/Random.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/pokeballColorDecoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/nBitCounter_TB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/nBitCounter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/MUX2x1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/mainControllerTB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/mainController.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/main.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/imageDividerTB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/imageDivider.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/hsync_generatorTB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/hsync_generator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/hexaToBinary.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/hdisplayareaverificator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/GameController.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/FSMTB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/FSM.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/FlipFlop.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/equal.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/displayAreaVerificator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/debounce.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/dataMatrix.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/Complemento2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/Comparador.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/ColorDecoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/clockDivider.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/charizardColorDecoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA/changeOrder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux_4to1.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux_2to1.sv
 set_global_assignment -name QIP_FILE RAM.qip
@@ -72,11 +115,8 @@ set_global_assignment -name SYSTEMVERILOG_FILE ALU_Vec.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU_NBITS.sv
 set_global_assignment -name SYSTEMVERILOG_FILE VGAController_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE VGAController.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Umbral.sv
 set_global_assignment -name SYSTEMVERILOG_FILE testbench_Pipeline.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb_Hazard_Unit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE SuperALU_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE SuperALU.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Sumador_Completo_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Sumador_Completo.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Sumador_1bit.sv
@@ -86,18 +126,12 @@ set_global_assignment -name SYSTEMVERILOG_FILE RegMW.sv
 set_global_assignment -name SYSTEMVERILOG_FILE RegFD.sv
 set_global_assignment -name SYSTEMVERILOG_FILE RegEM.sv
 set_global_assignment -name SYSTEMVERILOG_FILE RegDE.sv
-set_global_assignment -name SYSTEMVERILOG_FILE PixProm_testbench.sv
-set_global_assignment -name SYSTEMVERILOG_FILE PixProm.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Pipeline_ARM.sv
 set_global_assignment -name SYSTEMVERILOG_FILE PCreg.sv
-set_global_assignment -name SYSTEMVERILOG_FILE PasoDatos.sv
-set_global_assignment -name SYSTEMVERILOG_FILE PasoControl.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Mux3.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Mux2.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Memory.sv
 set_global_assignment -name SYSTEMVERILOG_FILE MemInst_testbench.sv
 set_global_assignment -name SYSTEMVERILOG_FILE MemInst.sv
-set_global_assignment -name SYSTEMVERILOG_FILE MemDatos.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Hazard_Unit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE flopenr.sv
 set_global_assignment -name SYSTEMVERILOG_FILE FlipFlop_SR.sv
@@ -115,4 +149,8 @@ set_global_assignment -name SYSTEMVERILOG_FILE ALU_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
 set_global_assignment -name QIP_FILE RamV.qip
 set_global_assignment -name SYSTEMVERILOG_FILE InstSelector.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VecGen.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

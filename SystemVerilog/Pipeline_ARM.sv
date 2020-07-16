@@ -119,19 +119,26 @@ Memory memory(	clk, clock_vga,
 					ALUResultM, WriteDataM,
 					WA3M,
 					VGAArd,
+					PCSrcMV, RegWriteMV, MemtoRegMV, MemWriteMV,
+					ALUResultMV, WriteDataMV,
+					WA3MV,
+					VGAArdV,
 					PCSrcW, RegWriteW, MemtoRegW,
 					ReadDataW, ALUOutW, ALUOutM, VGAData,
-					WA3W); 
+					WA3W,
+					PCSrcWV, RegWriteWV, MemtoRegWV,
+					ReadDataWV, ALUOutWV, ALUOutMV, VGADataV,
+					WA3WV); 
 					
 
-MemoryV memoryv(	clk, clock_vga,
+/*MemoryV memoryv(	clk, clock_vga,
 					PCSrcMV, RegWriteMV, MemtoRegMV, MemWriteMV,
 					ALUResultMV, WriteDataMV,
 					WA3MV,
 					VGAArdV,
 					PCSrcWV, RegWriteWV, MemtoRegWV,
 					ReadDataWV, ALUOutWV, ALUOutMV, VGADataV,
-					WA3WV); 
+					WA3WV); */
 					
 
 //Writeback

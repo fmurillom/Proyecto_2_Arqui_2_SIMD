@@ -1,0 +1,24 @@
+module Comparador 
+	( 
+	input [7:0] ExponenteA, ExponenteB,
+	output Cout,
+	output [7:0] S
+	); 
+	logic [7:0] carrys;
+	assign carrys[0]=0;
+	genvar i;
+	generate
+		for (i=0; i<8 ; i++)begin :forloop
+			if(i==7) begin
+				Restador i1(ExponenteA[i],ExponenteB[i],carrys[i],S[i],Cout);
+			end
+			else begin
+				Restador i2(ExponenteA[i],ExponenteB[i],carrys[i],S[i],carrys[i+1]);
+			end
+
+		end
+		
+	endgenerate
+	
+endmodule
+

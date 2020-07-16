@@ -1,0 +1,9 @@
+module FSMTB();
+
+	
+
+	 initial begin
+	  FPGA_Clock = 0;
+	  forever #10 FPGA_Clock = ~FPGA_Clock;
+	 end    
+endmodule

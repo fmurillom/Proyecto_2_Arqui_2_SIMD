@@ -45,7 +45,7 @@ assign ge = (neg == overflow);
 
 always_comb
 	case(Cond)
-		1'b1: 
+		4'b1010:
 			CondEx = zero; // EQ
 		4'b0001: 
 			CondEx = ~zero; // NE
@@ -65,7 +65,7 @@ always_comb
 			CondEx = carry1 & ~zero; // HI
 		4'b1001: 
 			CondEx = ~(carry1 & ~zero); // LS
-		4'b1010: 
+		1'b1: 
 			CondEx = ge; // GE
 		4'b1011: 
 			CondEx = ~ge; // LT

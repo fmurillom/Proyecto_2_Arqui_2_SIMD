@@ -1,0 +1,10 @@
+module spritePositionVerificator(
+	input [9:0] x_pos, y_pos,
+	input [9:0] h_count, v_count,
+	output visible,
+	output [9:0] i_pos,j_pos
+	);
+	
+	userSelectionVerificator #(10)
+
+endmodule

@@ -1,0 +1,6 @@
+module pokeballColorDecoder(
+	input [3:0] codedColor,
+	ouput [23:0] RGB
+	);
+
+endmodule

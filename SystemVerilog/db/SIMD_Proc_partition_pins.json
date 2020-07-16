@@ -16,7 +16,27 @@
 					"strict" : false
 				},
 				{
+					"name" : "InstrD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrD[6]",
+					"strict" : false
+				},
+				{
 					"name" : "InstrD[8]",
+					"strict" : false
+				},
+				{
+					"name" : "InstrD[10]",
 					"strict" : false
 				},
 				{
@@ -48,6 +68,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "InstrD[18]",
+					"strict" : false
+				},
+				{
 					"name" : "InstrD[19]",
 					"strict" : false
 				},
@@ -68,51 +92,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "InstrDV[0]",
+					"name" : "InstrD[24]",
 					"strict" : false
 				},
 				{
-					"name" : "InstrDV[1]",
-					"strict" : false
-				},
-				{
-					"name" : "InstrDV[2]",
-					"strict" : false
-				},
-				{
-					"name" : "InstrDV[8]",
-					"strict" : false
-				},
-				{
-					"name" : "InstrDV[11]",
-					"strict" : false
-				},
-				{
-					"name" : "InstrDV[12]",
-					"strict" : false
-				},
-				{
-					"name" : "InstrDV[13]",
-					"strict" : false
-				},
-				{
-					"name" : "InstrDV[14]",
-					"strict" : false
-				},
-				{
-					"name" : "InstrDV[15]",
-					"strict" : false
-				},
-				{
-					"name" : "InstrDV[16]",
-					"strict" : false
-				},
-				{
-					"name" : "InstrDV[17]",
-					"strict" : false
-				},
-				{
-					"name" : "InstrDV[19]",
+					"name" : "InstrD[25]",
 					"strict" : false
 				},
 				{
@@ -120,15 +104,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "InstrDV[21]",
-					"strict" : false
-				},
-				{
 					"name" : "InstrDV[22]",
-					"strict" : false
-				},
-				{
-					"name" : "InstrDV[23]",
 					"strict" : false
 				},
 				{
@@ -652,11 +628,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "and_enable",
+					"name" : "Stuck",
 					"strict" : false
 				},
 				{
-					"name" : "clock_vga",
+					"name" : "vga_sync",
 					"strict" : false
 				},
 				{
@@ -704,26 +680,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "GreenOut[3]",
-					"strict" : false
-				},
-				{
-					"name" : "GreenOut[4]",
-					"strict" : false
-				},
-				{
-					"name" : "GreenOut[5]",
-					"strict" : false
-				},
-				{
-					"name" : "GreenOut[6]",
-					"strict" : false
-				},
-				{
-					"name" : "GreenOut[7]",
-					"strict" : false
-				},
-				{
 					"name" : "BlueOut[0]",
 					"strict" : false
 				},
@@ -732,27 +688,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "BlueOut[2]",
-					"strict" : false
-				},
-				{
-					"name" : "BlueOut[3]",
-					"strict" : false
-				},
-				{
-					"name" : "BlueOut[4]",
-					"strict" : false
-				},
-				{
-					"name" : "BlueOut[5]",
-					"strict" : false
-				},
-				{
-					"name" : "BlueOut[6]",
-					"strict" : false
-				},
-				{
-					"name" : "BlueOut[7]",
+					"name" : "visible",
 					"strict" : false
 				},
 				{
@@ -761,6 +697,10 @@
 				},
 				{
 					"name" : "clk50",
+					"strict" : false
+				},
+				{
+					"name" : "go",
 					"strict" : false
 				}
 			]
